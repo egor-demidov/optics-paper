@@ -1,0 +1,72 @@
+In coating experiments, mobility-classified particles of different types were exposed to supersaturated DOS vapor and then changes in the mobility diameter and mass were measured. The initial mobility diameters of the particles were chosen such that their initial volume equivalent diameters ($D_{ve}$) were approximately equal between the different types of aerosols used,
+\begin{equation}
+    \label{eq:diam_ve}
+    D_{ve}=\sqrt[3]{\frac{6m}{\pi\rho}}
+\end{equation}
+where $m$ is particle mass and $\rho$ is material density. Electrical mobility and volume equivalent diameters, as well as particle masses and material densities, are provided in Table \ref{tab:densities}.
+
+\begin{table}[ht]
+\caption{Electrical mobility and volume-equivalent diameters of bare aerosol particles, along with particle mass and material density}
+\label{tab:densities}
+\begin{center}
+\begin{tabular}{ l c c c c } 
+ \hline
+ & $D_m$, nm & $m$, fg & $\rho$, g/cm\textsuperscript{3} & $D_{ve}$, nm\\
+ \hline
+Soot & 240 & 2.367 & 1.77 & 137\\
+Nigrosin & 150 & 2.488 & 1.41\tablefootnote{Measured in this study (see mass-mobility measurements)} & 150\\
+CB (compact) & 150 & 1.283 & 1.77 & 111\\
+CB (agglomerated) & 240 & 4.571 & 1.77 & 170\\
+ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+Fractal and compact particles responded differently to coating, as shown in Figure \ref{fig:gfd}a, where the dependence of electrical mobility diameter growth factor ($\rm Gfd$) on mass growth factor ($\rm Gfm$) is plotted for coated aerosols. With the addition of DOS, $\rm Gfd$ increased rapidly for nigrosin, but gradually for compact CB. For agglomerated CB, the value of $\rm Gfd$ remained nearly unchanged, increasing only slightly for $\rm Gfm > 2$. In the case of soot, $\rm Gfd$ decreased notably for lower coating mass, but began to increase for $\rm Gfm > 2.2$.
+
+Compact CB particles grew slower than nigrosin particles because they are made of multiple smaller primary particles and contain significant void space, with a void fraction of approximately 36\% \citep{RN18}. Part of the DOS coating may have occupied the voids inside the compact CB particles instead of forming a layer around them, thus resulting in less size growth than for solid nigrosin spheres. 
+
+\begin{figure}[htp]
+    \centering
+    \resizebox{\columnwidth}{!}{\begin{tikzpicture}
+    \begin{axis}[
+    xlabel=Gfm,
+    ylabel=Gfd,
+    %legend pos=south east,
+    xmin=1
+    ]
+        \addplot [color=tab_orange,mark=square*] table {plots/gfd/nigrosin_coated.txt};
+        \addplot [color=tab_grey,mark=triangle*] table {plots/gfd/cb_cmp_coated.txt};
+        \addplot [color=tab_red,mark=diamond*] table {plots/gfd/cb_agg_coated.txt};
+        \addplot [color=tab_blue,mark=otimes*] table {plots/gfd/soot_coated.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}
+    \begin{axis}[
+    xlabel=Gfm,
+    ylabel=Gfd,
+    xmin=1,
+    ymax=1.05,
+    samples=2,
+    legend cell align={left},
+    legend style={at={(0.97,0.55)},anchor=east}
+    ]
+        \addplot [color=tab_orange,mark=square*][domain=0:3.5] {1};
+        \addlegendentry{Nigrosin}
+        \addplot [color=tab_grey,mark=triangle*] table {plots/gfd/cb_cmp_heated.txt};
+        \addlegendentry{CB\textsubscript{cmp}}
+        \addplot [color=tab_red,mark=diamond*] table {plots/gfd/cb_agg_heated.txt};
+        \addlegendentry{CB\textsubscript{agg}}
+        \addplot [color=tab_blue,mark=otimes*] table {plots/gfd/soot_heated.txt};
+        \addlegendentry{Soot}
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(b)}};
+    \end{axis}
+    \end{tikzpicture}}
+    \caption{Electrical mobility diameter growth factor ($\rm Gfd$) vs mass growth factor ($\rm Gfm$) upon processing of different types of particles: (a) DOS coated particles and (b) DOS-coated-denuded particles}
+    \label{fig:gfd}
+\end{figure}
+
+Unlike compact particles, fractal soot and aggregated CB restructure upon condensation of DOS, with higher coating mass leading to greater compaction, as reflected by a decrease in $\rm Gfd$. Since particle compaction is partially offset by the addition of the coating, the latter must be removed by thermal denuding to discriminate the contributions from restructuring and coating volume addition. As shown in Figure \ref{fig:gfd}b, the $\rm Gfd$ of coated-denuded soot drops substantially, reaching nearly full compaction at $Gfm \approx 2$, as similarly reported in \citep{RN13}. Only then the soot particle mobility diameter begins to increase during subsequent coating addition (Figure \ref{fig:gfd}a). In contrast to fractal soot, agglomerated CB particles undergo minimal restructuring, while for compact CB particles restructuring is barely noticeable. The negligible restructuring of compact CB is unsurprising because particles were generated from an aqueous suspension where aggregates underwent complete restructuring during manufacturing and upon droplet evaporation during nebulization \citep{RN51}. The somewhat more pronounced restructuring of agglomerated CB was due to partial folding of the branches (Figure \ref{fig:sem}c), each branch made of a compact CB particle (Figure \ref{fig:sem}d). These drastically different responses in coating thickness and morphology between particles of the four types produce different optical responses, as described in section \ref{sec:optical}.

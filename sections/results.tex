@@ -1,0 +1,59 @@
+\subsection{Particle size and morphology}
+
+\subsubsection{Bare particles of different types}
+
+\input{sections/results/morphology_bare.tex}
+
+\subsubsection{Particles processed by vapor condensation}
+
+\input{sections/results/morphology_coated.tex}
+
+\subsubsection{Growth by vapor condensation of multiply charged particles}
+
+Multiply charged particles are larger and acquire coatings at a lower rate than the singly-charged smaller particles because in continuum regime the rate of vapor condensation is inversely proportional to particle radius. This effect of slower condensation is less pronounced for fractal aggregates, at least while they remain lightly coated, because both singly charged smaller aggregates and multiply charged larger aggregates are composed of primary spherules of approximately the same diameter, which is smaller than the gas mean free path. Hence, individual primary spherules in both aggregates gain condensate under molecular condensation regime at the same rate. Experimentally, the slower rate of growth of non-fractal multiply charged particles can be observed by adding a second diffusion charger after DMA1 during TDMA scans, allowing the discrimination between particles of different charges in the pseudo-monodisperse aerosol, as shown in Figure \ref{fig:recharged_coated} for fresh and coated nigrosin aerosol. Coating thicknesses calculated from mobility diameters of smaller and larger particles before and after coating application obtained from those scans (Table \ref{tab:recharged_coated}) indicate that the larger particles acquired a $24\%$ thinner coating layer.
+
+
+\begin{figure}[htp]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$D/D_0\ \mathrm{nm}$},
+    ylabel={$N,\ \rm cm^{-3}$},
+    ymin=0,
+    xmin=0.5,
+    xmax=2,
+    legend cell align={left}
+    ]
+        \addplot [only marks,tab_blue,mark=otimes*,mark options={scale=0.5}] table {plots/recharged_coated/nigrosin_fresh.txt} node [above,pos=0.33] {$1\rightarrow 2$} node [above,pos=0.5] {$1\rightarrow 1$} node [above,pos=0.7] {$2\rightarrow 1$};
+        \addplot [only marks,tab_orange,mark=square*,mark options={scale=0.5}] table {plots/recharged_coated/nigrosin_coated.txt};
+        % f(x) mult/stdev/sqrt(2*pi)*exp(-1/2*((x-shift)./stdev).^2)
+        \addplot [domain=0.5:2,no markers,color=tab_blue,samples=100] {0.3972/0.0425/sqrt(2*pi)*exp(-1/2*((x-0.6746)/0.0425)^2)+2.4380/0.0634/sqrt(2*pi)*exp(-1/2*((x-1.0230)/0.0634)^2)+0.7397/0.1165/sqrt(2*pi)*exp(-1/2*((x-1.5875)/0.1165)^2)};
+        \addplot [domain=0.5:2,no markers,color=tab_orange,samples=100] {0.4535/0.0504/sqrt(2*pi)*exp(-1/2*((x-0.7762)/0.0504)^2)+2.8188/0.0782/sqrt(2*pi)*exp(-1/2*((x-1.1878)/0.0782)^2)+0.9328/0.1457/sqrt(2*pi)*exp(-1/2*((x-1.7128)/0.1457)^2)};
+        \addlegendentry{Fresh};
+        \addlegendentry{Coated};
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Recharged TDMA scans of fresh and coated 150 nm nigrosin. X-axis, the electrical mobility diameter, is normalized by $D_0=150\ \rm nm$. $1\rightarrow 1$ indicates particles that were singly charged prior to recharging and remained singly charged after, $2\rightarrow 1$ indicates particles that were doubly charged prior to recharging and became singly charged after, $1\rightarrow 2$ indicates particles that were singly charged prior to recharging and became doubly charged after. While there are also triply charged particles in the size-classified aerosol, they are not visible in this TDMA scan due to limitations on the scan range with the sample flow rate used during optical measurements. Broader scans of bare particles that do show triply charged particles are available in Figure \ref{s:fig:recharged_all}.}
+    \label{fig:recharged_coated}
+\end{figure}
+
+\begin{table}[htp]
+    \centering
+    \caption{Coating thickness of singly and doubly charged nigrosin particles of 150 nm initial mobility diameter (data from Figure \ref{fig:recharged_coated})}
+    \begin{tabular}{c c c c}
+        \hline
+        & $1\rightarrow 2$ & $1\rightarrow 1$ & $2\rightarrow 1$ \\
+        \hline
+        $\mathrm{Gfd}_\mathrm{bare}$ & 0.673 & 1.020 & 1.587\\
+        $\mathrm{Gfd}_\mathrm{coated}$ & 0.773 & 1.187 & 1.713\\
+        $D_{\mathrm{bare}}$, nm & 154 & 153 & 238 \\
+        $D_{\mathrm{coated}}$, nm & 178 & 178 & 257 \\
+        $\Delta r_{ve}$, nm & 12.0 & 12.5 & 9.5 \\
+        \hline
+    \end{tabular}
+    \label{tab:recharged_coated}
+\end{table}
+
+\subsection{Optical measurements}
+
+\input{sections/results/optics.tex}

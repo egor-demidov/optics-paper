@@ -1,0 +1,564 @@
+\label{sec:optical}
+
+\subsubsection{The effect of multiple charging on measured optical cross sections of bare particles}
+
+We begin our discussion with analysis of absolute optical cross sections, which often are subject to significant uncertainty. A major source of this uncertainty stems from size classification of particles based on their electrical mobility, which may introduce a significant fraction of particles carrying multiple charges in a nominally monodisperse aerosol. As described in the previous section, such particles are larger than the particles of interest and hence absorb and scatter light stronger, resulting in an overestimation of these optical properties. The contribution from these multiply charged particles must be accounted for when deriving absolute absorption and scattering cross sections, optical enhancements, and single-scattering albedo (SSA), as described below. 
+
+Most commonly, the size-classified aerosol is passed through a second diffusion charger, which re-charges the particles and allows to reveal the nearly-true distribution of multiply-charged particles among the size-selected particles on a TDMA scan. Alternatively, one can use electron microscopy images of particle samples to estimate fractions of larger multiply charged particles, at least for non-fractal particles of regular shapes. When the aerosol number concentration is low, the contribution from some particle modes, such as from triply charged particles is difficult to quantify accurately, but their contribution to measured scattering and absorption cross sections can still be significant. Below we illustrate the application of both approaches, recharging-TDMA and SEM imaging, towards elucidating the fraction of multiply charged particles in a nominally monodisperse sample of spherical nigrosin particles, and evaluating the contribution of such particles to absorption and scattering cross sections.  
+
+Based on the recharged TDMA scan of the 150 nm mobility diameter nigrosin  shown in Figure \ref{s:fig:recharged_all}b and using equations \ref{s:eq:gaussian-mode} - \ref{s:eq:gaussian-fraction}, number fractions ($f_i$) of singly, doubly, and triply charged particles were found to be 76\%, 19\%, and 5\%, respectively. The sizes of these particles were 150, 236, and 315 nm, corresponding to the peaks at 1.02, 1.59, and 2.11 in the TDMA scan (Figure \ref{s:fig:recharged_all}b). Counting particles of three different sizes in the SEM image (Figure \ref{fig:sem}b) provided similar albeit not identical fractions, $84\%$, $11\%$, and $4\%$. The difference between the two methods is a result of several effects, including insufficient statistics due to the small number of examined particles in the SEM image and the non-negligible ``contamination'' of the $1\rightarrow 1$ particle mode in Figure \ref{s:fig:recharged_all}b by doubly charged particles \citep{RN7}. Unlike this ``contamination'', the statistics can be improved by increasing the number of interrogated particles, and hence in the following example we use the fractions obtained from the SEM image to calculate the contributions to absorption and scattering cross sections from each individual particle mode, along with the total cross sections comprising the sum of all three modes,
+\begin{equation}
+    C_\mathrm{abs/sca,tot}=\sum_{i}{f_iC_{\mathrm{abs/sca},i}}
+    \label{eq:total_corss_section}
+\end{equation}
+where $f_i$ is the number fraction of the respective mode, $C_{\mathrm{abs/sca},i}$ is the absorption or scattering cross section of the respective mode, and $C_{\rm abs/sca,tot}$ is the overall scattering or absorption cross section of the aerosol. The relative contribution of mode $i$ to total cross section is
+
+\begin{equation}
+    f_{\mathrm{abs/sca}}=\frac{C_{\mathrm{abs/sca},i}\times f_i}{C_\mathrm{abs/sca,tot}}
+    \label{eq:contribution}
+\end{equation}
+
+As shown in Table \ref{tab:absorption_mie}, triply charged nigrosin particles, being only $4\%$ by number, contributed to $22\%$ of the total absorption cross section and $34\%$ of the total scattering cross section. The total estimated absorption cross section including all three modes is $1.78\times 10^{-14}\ \mathrm{m}^2$, while the absorption cross section consisting only of 150 nm particles is $1.04\times 10^{-14}\ \mathrm{m}^2$. Thus, presence of doubly and triply charged particles in a mobility-classified aerosol leads to overestimation of the absorption cross section by $71\%$. The bias due to larger particle modes is even more significant for scattering, where the total estimated scattering cross section is $1.36\times 10^{-14}\ \mathrm{m}^2$, while the scattering cross section of the 150 nm particle mode is $5.06\times 10^{-15}\ \mathrm{m}^2$, indicating a $169\%$ overestimation. For comparison, experimentally measured absorption and scattering cross sections for 150 nm nigrosin measured without recharging were $2.00\times 10^{-14}\ \mathrm{m}^2$ and $1.87\times 10^{-14}\ \mathrm{m}^2$ respectively. Thus, factoring the optical contributions of multiply charged particles into calculated optical properties reduced the bias, but still failed to provide full agreement for a number of reasons, e.g., the singly-charged particle mode in Figure \ref{s:fig:recharged_all}b still containing a fraction of doubly charged particles \citep{RN7}, the presence of particles with higher order charges that could not be detected due to their large size and small number density, etc.
+
+\begin{table}[htp]
+    \centering
+    \caption{Absorption and scattering characteristics of nigrosin particles calculated with Mie. Quantitative statistics are based on particle counts from the SEM image shown in Figure \ref{fig:sem}b.}
+    \begin{tabular}{l c c c}
+        \hline
+        & 150 nm & 236 nm & 315 nm \\
+        \hline
+        Number fraction ($f_i$) & 0.84 & 0.11 & 0.04 \\
+        Particle mass, fg & 2.49 & 9.70 & 23.08 \\
+        \multicolumn{4}{c}{\textit{Absorption}} \\
+        \hline
+        $C_{\mathrm{abs}},\ \mathrm{m}^2\times10^{14}$ & 1.04 & 4.70 & 9.64 \\
+        $C_{\mathrm{abs}}\times f_i,\ \mathrm{m}^2\times10^{14}$ & 0.876 & 0.517 & 0.386 \\
+        Contribution, $C_{\mathrm{abs}}\times f\over C_{\mathrm{abs,total}}$ & 0.493 & 0.291 & 0.217 \\
+        MAC, $\mathrm{m}^2/\mathrm{g}$ & 4.19 & 4.48 & 4.18 \\ 
+        $C_{\rm abs,tot},\ \rm m^2\times10^{14}$ & \multicolumn{3}{c}{1.78 (total of three modes)} \\
+        \multicolumn{4}{c}{\textit{Scattering}} \\
+        \hline
+        $C_\mathrm{sca},\ \mathrm{m}^2\times 10^{14}$ & 0.506 & 4.32 & 11.6 \\
+        $C_\mathrm{sca}\times f_i,\ \mathrm{m}^2\times 10^{14}$ & 0.425 & 0.475 & 0.464 \\
+        Contribution, $C_\mathrm{sca}\times f_i\over C_\mathrm{sca,tot}$ & 0.312 & 0.348 & 0.340 \\
+        $C_{\rm sca,tot},\ \rm m^2\times10^{14}$ & \multicolumn{3}{c}{1.36 (total of three modes)} \\
+        \hline
+    \end{tabular}
+    \label{tab:absorption_mie}
+\end{table}
+
+One can physically reduce the fraction of multiply charged particles in a mobility-classified aerosol by selecting particles with diameters that are on the falling edge (or towards the tail end) of the incoming aerosol size distribution (Figure \ref{s:fig:smps}). As shown in Figure \ref{s:fig:recharged_all}, whereas 150 nm electrical mobility classified aerosols of different types contain large fractions of doubly charged particles, the fraction of those particles is significantly lower in the 240 nm aerosols. Hence, a simple way to minimize the contribution of multiply charged particles during experimental measurements is by carefully selecting the target particle size during mobility classification. In the following section, we explore how the presence of multiply charged particles affects the relative optical enhancements when bare particles become coated.
+
+\subsubsection{Optical response of coated particles}
+
+Figure \ref{fig:opt_data} shows experimentally measured enhancements in light absorption and scattering for the different particle types subjected to processing via coating by DOS (a, c, e) or coating combined with thermal denuding (b, d, f), along with the corresponding changes in SSA. The enhancements were obtained by normalizing experimentally measured optical cross sections of processed aerosols by optical cross sections of bare aerosols. The SSA was calculated as a ratio of scattering and extinction cross sections for the same aerosol, either fresh or processed. Presenting data in a normalized form facilitates comparison of different particle types, which have significantly different absolute values of absorption and scattering cross sections (see Figure \ref{s:fig:mie_abs}). Also, such representation is common for optical data reporting in laboratory, field, and computational studies \citep{RN7,RN52,RN22}. 
+
+\begin{figure}[htp]
+    \centering
+    \resizebox{\columnwidth}{!}{\begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$E_\mathrm{abs}$,
+    legend pos=south east,
+    xmin=0,
+    ymin=1,
+    legend cell align={left}
+    ]
+        \addplot [color=tab_orange,mark=square*] table [col sep=tab,y=E_abs] {plots/enhancements_experiment/nigrosin.txt};
+        \addlegendentry{Nigrosin}
+        \addplot [color=tab_grey,mark=triangle*] table [col sep=tab,y=E_abs] {plots/enhancements_experiment/cb_cmp_coated.txt};
+        \addlegendentry{CB200\textsubscript{cmp}}
+        \addplot [color=tab_red,mark=diamond*] table [col sep=tab,y=E_abs] {plots/enhancements_experiment/cb_agg_coated.txt};
+        \addlegendentry{CB200\textsubscript{agg}}
+        \addplot [color=tab_blue,mark=otimes*] table [col sep=tab,y=E_abs] {plots/enhancements_experiment/soot_coated.txt};
+        \addlegendentry{Soot}
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$E_\mathrm{abs}$,
+    xmin=0
+    ]
+        \addplot [color=tab_grey,mark=triangle*] table [col sep=tab,y=E_abs] {plots/enhancements_experiment/cb_cmp_heated.txt};
+        \addplot [color=tab_red,mark=diamond*] table [col sep=tab,y=E_abs] {plots/enhancements_experiment/cb_agg_heated.txt};
+        \addplot [color=tab_blue,mark=otimes*] table [col sep=tab,y=E_abs] {plots/enhancements_experiment/soot_heated.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(b)}};
+    \end{axis}
+    \end{tikzpicture}}
+    \resizebox{\columnwidth}{!}{\begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$E_\mathrm{sca}$,
+    xmin=0,
+    ymin=1
+    ]
+        \addplot [color=tab_orange,mark=square*] table [col sep=tab,y=E_sca] {plots/enhancements_experiment/nigrosin.txt};
+        \addplot [color=tab_grey,mark=triangle*] table [col sep=tab,y=E_sca] {plots/enhancements_experiment/cb_cmp_coated.txt};
+        \addplot [color=tab_red,mark=diamond*] table [col sep=tab,y=E_sca] {plots/enhancements_experiment/cb_agg_coated.txt};
+        \addplot [color=tab_blue,mark=otimes*] table [col sep=tab,y=E_sca] {plots/enhancements_experiment/soot_coated.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(c)}};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$E_\mathrm{sca}$,
+    xmin=0
+    ]
+        \addplot [color=tab_grey,mark=triangle*] table [col sep=tab,y=E_sca] {plots/enhancements_experiment/cb_cmp_heated.txt};
+        \addplot [color=tab_red,mark=diamond*] table [col sep=tab,y=E_sca] {plots/enhancements_experiment/cb_agg_heated.txt};
+        \addplot [color=tab_blue,mark=otimes*] table [col sep=tab,y=E_sca] {plots/enhancements_experiment/soot_heated.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(d)}};
+    \end{axis}
+    \end{tikzpicture}}
+    \resizebox{\columnwidth}{!}{\begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$\rm SSA$,
+    xmin=0,
+    ymin=0.2,
+    ymax=0.7
+    ]
+        \addplot [color=tab_orange,mark=square*] table [col sep=tab,y=SSA] {plots/absolute_experimental/nigrosin.txt};
+        \addplot [color=tab_grey,mark=triangle*] table [col sep=tab,y=SSA] {plots/absolute_experimental/cb_cmp_coated.txt};
+        \addplot [color=tab_red,mark=diamond*] table [col sep=tab,y=SSA] {plots/absolute_experimental/cb_agg_coated.txt};
+        \addplot [color=tab_blue,mark=otimes*] table [col sep=tab,y=SSA] {plots/absolute_experimental/soot_coated.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(e)}};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$\rm SSA$,
+    xmin=0,
+    ymin=0.2,
+    ymax=0.7
+    ]
+        \addplot [color=tab_grey,mark=triangle*] table [col sep=tab,y=SSA] {plots/absolute_experimental/cb_cmp_heated.txt};
+        \addplot [color=tab_red,mark=diamond*] table [col sep=tab,y=SSA] {plots/absolute_experimental/cb_agg_heated.txt};
+        \addplot [color=tab_blue,mark=otimes*] table [col sep=tab,y=SSA] {plots/absolute_experimental/soot_heated.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(f)}};
+    \end{axis}
+    \end{tikzpicture}}
+    \caption{Experimentally measured enhancement in light absorption (a, b), scattering (c, d), and SSA (e, f) for coated (a, c, e) and coated-denuded (b, d, f) aerosols of different types. Relative error for optical cross sections ranges from 5\% (for bare particles with weak scattering signal) to 1\% (for thickly coated particles with strong scattering and extinction)}
+    \label{fig:opt_data}
+\end{figure}
+
+
+
+The addition of coating enhances light absorption for all particle types (Figure \ref{fig:opt_data}a), with the largest enhancement ($E_{\rm abs}=1.30$) observed for spherical nigrosin particles and the lowest ($E_{\rm abs}=1.15$) for fractal soot particles for a 30 nm thick coating (volume equivalent coating thickness, as defined by Equation \ref{eq:drve})). For soot, the magnitude of enhancement is in agreement with previous experimental measurements \citep{RN41,RN7}. The enhancement in light scattering is more substantial than for absorption (Figure \ref{fig:opt_data}c), with the largest values observed for fractal soot ($E_{sca} = 3.5$ at 30 nm coating thickness), followed by the other particle types ($E_{\rm sca} \approx 2$). During coating, absorption and scattering can be altered by changes in both the particle mixing state (addition of a coating layer) and morphology (restructuring), with the exception of nigrosin, where only the mixing state is altered. By removing the coating layer via thermal denuding, it is possible to isolate changes induced by the restructured particle morphology from the changes due to coating addition.
+
+Thermal denuding of coated particles reduces the enhancement in absorption to 1.00±0.05 for all particle types (Figure \ref{fig:opt_data}). Thus, absorption is largely independent of the soot particle morphology but can be significantly increased by the lensing effect, where the transparent coating layer intensifies light absorption by the particle core.
+%indicating that absorption is not affected significantly by restructuring of fractal soot aggregates \citep{RN53} and the major cause of enhancement is the lensing effect, where the transparent shell of coating material makes light absorption by the particle core stronger \citep{RN34}.
+Scattering enhancement also decreases after denuding, approaching unity for all particle types except for soot ($E_{sca} = 1.45$ at 30 nm coating thickness), as shown in Figure \ref{fig:opt_data}d. The significant residual scattering enhancement in soot is the result of restructuring experienced by fractal particles. As shown previously \citep{RN40}, the primary particles in fractal aggregates scatter light poorly due to their small size relative to the light wavelength, but after restructuring the interactions between the primary particles increase, leading to a significant increase in scattering \citep{RN7}. The more fractal the particle is initially, the higher the increase in scattering will be after processing. The joint effect of restructuring and lensing is responsible for fractal soot having the largest scattering enhancement during coating.
+
+For bare particles, SSA is the lowest for fractal soot and the highest for nigrosin (Figure \ref{fig:opt_data}e). With the addition of the coating shell, SSA increases with approximately the same slope for all particle types, although fractal soot shows a faster rate of increase in the 15-30 nm region, where it undergoes significant restructuring. This region can be clearly seen in experiments with coated-denuded soot (Figure \ref{fig:opt_data}f). For other particle types, SSA of bare and coated-denuded particles remain unchanged within experimental uncertainty.    
+
+
+\subsubsection{Comparison of experiments with simple optics models}
+
+Figures \ref{fig:mie_abs} and \ref{fig:mie_sca} compare experimentally measured absorption and scattering enhancements for all particle types against calculations by the commonly used core-shell Mie optical model, which predicts optical properties exactly for spherical particles and often produces a reasonable agreement for compact aggregates. In the case of soot and CB, we also included the calculation by the RDG-Mie approach.
+
+%but which underestimates absorption because it neglects the spherule-spherule coupling. 
+
+When comparing experiments against Mie calculations, the agreement in absorption enhancement is better for nigrosin and aggregated CB (Figure \ref{fig:mie_abs}b and \ref{fig:mie_abs}d) than for soot and compact CB (Figure \ref{fig:mie_abs}a and \ref{fig:mie_abs}c), especially at coating thicknesses below 25 nm. The RDG-Mie values agree with measured absorption enhancement for soot with coating thicknesses below 30 nm, but become lower than experimental values for thicker coatings. Such a trend can be readily explained by the fact that, for absorption, the RDG approach assumes no optical interaction between primary particles. This assumption is approximately valid for fractal aggregates, but not for compact aggregates. For this reason, RDG-Mie performed poorly in predicting absorption enhancement for both types of CB particles. For scattering enhancement predicted by Mie, there was a reasonable agreement with experimental measurements for soot and agglomerated CB, (Figures \ref{fig:mie_sca}a,d), but for nigrosin and compact CB the deviation was high and the curves diverged progressively with increasing coating thickness. SSA was significantly underestimated by Mie calculations for all aerosol types (Figure \ref{fig:ssa}), with the lowest deviation in the case of fractal soot. 
+
+Many factors can contribute to differences in experimental optical measurements for soot and its surrogates and also to disagreement between the experimental optical measurements and optical model predictions. These factors include differences in particle morphology between soot and its surrogates, the presence of multiply charged larger particles in nominally size-classified aerosol, and an implicit assumption that singly and larger multiply-charged particles acquire coatings at the same rate \citep{RN75}. In the following, we assess and discuss contributions from some of these factors.
+
+\begin{figure}[htp]
+    \centering
+    \resizebox{\columnwidth}{!}{\begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$E_\mathrm{abs}$,
+    legend pos=north west,
+    xmin=0,
+    ymin=1,
+    legend cell align={left}
+    ]
+        \addplot [only marks,color=tab_blue,mark=otimes*] table [col sep=tab,y=E_abs] {plots/enhancements_experiment/soot_coated.txt};
+        \addlegendentry{Experimental}
+        \addplot [no markers,color=tab_blue] table [col sep=tab,y=E_abs_mie] {plots/enhancements_mie/soot.txt};
+        \addlegendentry{Mie (+)}
+        \addplot [ultra thick,dashed,no markers,color=tab_blue] table [col sep=tab,y=E_abs_corr] {plots/enhancements_mie/soot.txt};
+        \addlegendentry{Mie (+,++)}
+        \addplot [ultra thick,dotted,no markers,color=tab_blue] table [col sep=tab,y=E_abs_rdg] {plots/enhancements_mie/soot.txt};
+        \addlegendentry{RDG/Mie}
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Soot}};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$E_\mathrm{abs}$,
+    legend pos=north west,
+    xmin=0,
+    ymin=1,
+    legend cell align={left}
+    ]
+        \addplot [only marks,color=tab_orange,mark=square*] table [col sep=tab,y=E_abs] {plots/enhancements_experiment/nigrosin.txt};
+        \addplot [no markers,color=tab_orange] table [col sep=tab,y=E_abs_mie] {plots/enhancements_mie/nigrosin.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_orange] table [col sep=tab,y=E_abs_corr] {plots/enhancements_mie/nigrosin.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(b)}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Nigrosin}};
+    \end{axis}
+    \end{tikzpicture}}
+    \resizebox{\columnwidth}{!}{\begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$E_\mathrm{abs}$,
+    legend pos=north west,
+    xmin=0,
+    ymin=1,
+    legend cell align={left}
+    ]
+        \addplot [only marks,color=tab_grey,mark=triangle*] table [col sep=tab,y=E_abs] {plots/enhancements_experiment/cb_cmp_coated.txt};
+        \addplot [no markers,color=tab_grey] table [col sep=tab,y=E_abs_mie] {plots/enhancements_mie/cb_cmp.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_grey] table [col sep=tab,y=E_abs_corr] {plots/enhancements_mie/cb_cmp.txt};
+        \addplot [ultra thick,dotted,no markers,color=tab_grey] table [col sep=tab,y=E_abs_rdg] {plots/enhancements_mie/cb_cmp.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(c)}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{cmp}}};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$E_\mathrm{abs}$,
+    legend pos=north west,
+    xmin=0,
+    ymin=1,
+    legend cell align={left}
+    ]
+        \addplot [only marks,color=tab_red,mark=diamond*] table [col sep=tab,y=E_abs] {plots/enhancements_experiment/cb_agg_coated.txt};
+        \addplot [no markers,color=tab_red] table [col sep=tab,y=E_abs_mie] {plots/enhancements_mie/cb_agg.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_red] table [col sep=tab,y=E_abs_corr] {plots/enhancements_mie/cb_agg.txt};
+        \addplot [ultra thick,dotted,no markers,color=tab_red] table [col sep=tab,y=E_abs_rdg] {plots/enhancements_mie/cb_agg.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(d)}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{agg}}};
+    \end{axis}
+    \end{tikzpicture}}
+    \caption{Measured and calculated absorption enhancements for compact soot (a), nigrosin (b), compact CB (c), and agglomerated CB (d). Measured data are presented by markers, calculated with Mie theory by solid line, and calculated with Mie by accounting for doubly charged particles by dashed line. For cases (a) and (d), the dashed and solid line overlap due to a negligible fraction of double charged particles. Volume equivalent and mobility diameters for all aerosol types are available in Table \ref{tab:densities}.}
+    \label{fig:mie_abs}
+\end{figure}
+
+\begin{figure}[htp]
+    \centering
+    \resizebox{\columnwidth}{!}{\begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$E_\mathrm{sca}$,
+    legend pos=north west,
+    xmin=0,
+    ymin=1,
+    legend cell align={left}
+    ]
+        \addplot [only marks,color=tab_blue,mark=otimes*] table [col sep=tab,y=E_sca] {plots/enhancements_experiment/soot_coated.txt};
+        \addlegendentry{Experimental}
+        \addplot [no markers,color=tab_blue] table [col sep=tab,y=E_sca_mie] {plots/enhancements_mie/soot.txt};
+        \addlegendentry{Mie (+)}
+        \addplot [ultra thick,dashed,no markers,color=tab_blue] table [col sep=tab,y=E_sca_corr] {plots/enhancements_mie/soot.txt};
+        \addlegendentry{Mie (+,++)}
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Soot}};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$E_\mathrm{sca}$,
+    legend pos=north west,
+    xmin=0,
+    ymin=1,
+    legend cell align={left}
+    ]
+        \addplot [only marks,color=tab_orange,mark=square*] table [col sep=tab,y=E_sca] {plots/enhancements_experiment/nigrosin.txt};
+        \addplot [no markers,color=tab_orange] table [col sep=tab,y=E_sca_mie] {plots/enhancements_mie/nigrosin.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_orange] table [col sep=tab,y=E_sca_corr] {plots/enhancements_mie/nigrosin.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(b)}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Nigrosin}};
+    \end{axis}
+    \end{tikzpicture}}
+    \resizebox{\columnwidth}{!}{\begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$E_\mathrm{sca}$,
+    legend pos=north west,
+    xmin=0,
+    ymin=1,
+    legend cell align={left}
+    ]
+        \addplot [only marks,color=tab_grey,mark=triangle*] table [col sep=tab,y=E_sca] {plots/enhancements_experiment/cb_cmp_coated.txt};
+        \addplot [no markers,color=tab_grey] table [col sep=tab,y=E_sca_mie] {plots/enhancements_mie/cb_cmp.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_grey] table [col sep=tab,y=E_sca_corr] {plots/enhancements_mie/cb_cmp.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(c)}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{cmp}}};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$E_\mathrm{sca}$,
+    legend pos=north west,
+    xmin=0,
+    ymin=1,
+    legend cell align={left}
+    ]
+        \addplot [only marks,color=tab_red,mark=diamond*] table [col sep=tab,y=E_sca] {plots/enhancements_experiment/cb_agg_coated.txt};
+        \addplot [no markers,color=tab_red] table [col sep=tab,y=E_sca_mie] {plots/enhancements_mie/cb_agg.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_red] table [col sep=tab,y=E_sca_corr] {plots/enhancements_mie/cb_agg.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(d)}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{agg}}};
+    \end{axis}
+    \end{tikzpicture}}
+    \caption{Measured and calculated scattering  enhancements for compact soot (a), nigrosin (b), compact CB (c), and agglomerated CB (d). Measured data are shown by markers, calculated with Mie theory by solid line, and calculated with Mie by accounting for doubly charged particles by dashed line. For cases (a) and (d), the dashed and solid line overlap due to a negligible fraction of double charged particles. Volume equivalent and mobility diameters for all aerosol types are available in Table \ref{tab:densities}}
+    \label{fig:mie_sca}
+\end{figure}
+
+\begin{figure}[htp]
+    \centering
+    \resizebox{\columnwidth}{!}{\begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$\rm SSA$,
+    legend pos=north west,
+    xmin=0,
+    legend cell align={left}
+    ]
+        \addplot [only marks,color=tab_blue,mark=otimes*] table [col sep=tab,y=SSA] {plots/absolute_experimental/soot_coated.txt};
+        \addlegendentry{Experimental}
+        \addplot [no markers,color=tab_blue] table [col sep=tab,y=SSA_mie] {plots/absolute_mie/soot.txt};
+        \addlegendentry{Mie (+)}
+        \addplot [ultra thick,dashed,no markers,color=tab_blue] table [col sep=tab,y=SSA_corr] {plots/absolute_mie/soot.txt};
+        \addlegendentry{Mie (+,++)}
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Soot}};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$\rm SSA$,
+    legend pos=north west,
+    xmin=0,
+    legend cell align={left}
+    ]
+        \addplot [only marks,color=tab_orange,mark=square*] table [col sep=tab,y=SSA] {plots/absolute_experimental/nigrosin.txt};
+        \addplot [no markers,color=tab_orange] table [col sep=tab,y=SSA_mie] {plots/absolute_mie/nigrosin.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_orange] table [col sep=tab,y=SSA_corr] {plots/absolute_mie/nigrosin.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(b)}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Nigrosin}};
+    \end{axis}
+    \end{tikzpicture}}
+    \resizebox{\columnwidth}{!}{\begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$\rm SSA$,
+    legend pos=north west,
+    xmin=0,
+    legend cell align={left}
+    ]
+        \addplot [only marks,color=tab_grey,mark=triangle*] table [col sep=tab,y=SSA] {plots/absolute_experimental/cb_cmp_coated.txt};
+        \addplot [no markers,color=tab_grey] table [col sep=tab,y=SSA_mie] {plots/absolute_mie/cb_cmp.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_grey] table [col sep=tab,y=SSA_corr] {plots/absolute_mie/cb_cmp.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(c)}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{cmp}}};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$\rm SSA$,
+    legend pos=north west,
+    xmin=0,
+    legend cell align={left}
+    ]
+        \addplot [only marks,color=tab_red,mark=diamond*] table [col sep=tab,y=SSA] {plots/absolute_experimental/cb_agg_coated.txt};
+        \addplot [no markers,color=tab_red] table [col sep=tab,y=SSA_mie] {plots/absolute_mie/cb_agg.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_red] table [col sep=tab,y=SSA_corr] {plots/absolute_mie/cb_agg.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(d)}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{agg}}};
+    \end{axis}
+    \end{tikzpicture}}
+    \caption{Measured and calculated SSA for compact soot (a), nigrosin (b), compact CB (c), and agglomerated CB (d). Measured data are shown by markers, calculated with core-shell Mie theory  by solid line, and calculated with Mie by accounting for doubly charged particles by dashed line. For cases (a) and (d), the dashed and solid line overlap due to a negligible fraction of double charged particles. Volume equivalent and mobility diameters for all aerosol types are available in Table \ref{tab:densities}}
+    \label{fig:ssa}
+\end{figure}
+
+
+\subsubsection{The effect of multiple charging on coated particle optics}
+
+It is well recognized that the larger, multiply charged particles bias absolute optical cross sections high. We found that presenting optical changes as enhancements expressed relative to unprocessed aerosol does not cancel out the contribution of multiply charged particles, as shown in Figures \ref{fig:mie_abs} and \ref{fig:mie_sca}, which compare experimental measurements against Mie theory predictions made under an assumption of a monodisperse aerosol. Notably, for relative enhancements the calculations overestimate the experimental data, in sharp contrast with the absolute cross sections, where the calculations underestimate the experimental data.
+
+The lower experimental enhancements are caused by the multiply charged particles being coated at a lower rate, but absorbing and scattering light stronger than the singly-charged particles, which are the particles of interest. The size-dependent rate of coating growth leads to a non-uniform population mixing state of the aerosol \citep{RN75}, which is made of thickly-coated singly charged particles and thinly-coated multiply charged particles. Due to their lower coating thicknesses coupled with large contributions to absolute light absorption and scattering, multiply charged particles produce lower optical enhancements, biasing overall experimental enhancements low. A similar effect has been observed in a field study \citep{RN76}, where the bias arose because the average coating thickness was dominated by the thickly coated smaller particles present in large numbers, whereas most of light absorption was due a small number of thinly coated larger particles \citep{RN52,RN75}. The magnitude of this bias depends on the fraction of multiply charged particles in the size-classified aerosol. Figure \ref{s:fig:recharged_all}a,d shows that 240 nm soot and agglomerated CB aerosols contain a small fraction of multiply charged particles, while in 150 nm nigrosin and compact CB this fraction is significant (Figure \ref{s:fig:recharged_all}b,c). The fraction of multiply charged particles is low for soot and agglomerated CB because the 240 nm particle mode is on the far right slope of the size distribution (Figure \ref{s:fig:smps}) where the number of larger particles that could acquire multiple charges is low. As shown in the previous section for bare particles, by working with particle sizes on the right slope of the distribution, the impact of multiple charging can be greatly reduced without any additional measures. Alternatively, the measured data must be corrected to account for the significantly different growth rates of singly and multiply charged particles, e.g., by following the approach described in SI, where a simple expression is derived based on continuum-regime condensation law for coating thickness difference between two spherical particles of different diameters (Text S6). As illustrated by dashed lines in Figures \ref{fig:mie_abs} and \ref{fig:mie_sca}, accounting for the slower growth rate of multiply charged particles generally improves the agreement with the measured absorption and scattering enhancements. However, calculated SSA remains significantly underestimated relative to measurements even after correction.
+
+Notably, in the case of fractal soot, applying multiple charge correction produces inconsistent outcomes between different optical parameters. Absorption enhancement is improved only marginally whereas scattering enhancement becomes worse. The agreement is especially poor for thickly-coated aggregates that have collapsed into near-spheres. This is counterintuitive because fully compacted core-shell morphologies should be well reproduced by Mie theory. However, it is possible that even after restructuring the real geometry of such compact coated aggregates deviates from the center-symmetric core-shell model implicit of Mie. As shown by previous theoretical studies \citep{RN71,RN72}, absorption enhancements are lower when the absorbing core (sphere or aggregate) is located away from the center and closer to the periphery.
+
+\subsubsection{Explicit treatment of fractal soot particles in optical calculations}
+
+%In the case of coated aerosols (Figure \ref{fig:opt_data}a,c), absorption and scattering can change due to both restructuring and addition of a coating layer with the exception of nigrosin, which is already spherical and does not restructure. For coated-denuded aerosols (Figure \ref{fig:opt_data}b,d) changes in absorption and scattering reflect only the contribution from particle restructuring, as coating had been stripped prior to optical measurements.
+
+%The agreement between Mie predictions and experiments worsens with increasing coating thickness and could be related to the evolution of the coating-core arrangement and core morphology. Even for nigrosin and compact CB particles, there is a possibility of the deviation from the commonly used core-shell morphological mixing state, which assumes that the spherical core is located in the center of a spherical coating shell. Depending on the interplay in surface energies of the core and coating material, an off-center coating-core configuration can be formed, creating a smaller optical enhancement, an effect which is amplified with increasing coating thickness, as shown by \citet{RN71} and \citet{RN72}. For soot and fractal CB, changes in morphology could be a significant contributor as well.
+
+To verify if the remaining disagreement between experimental and predicted optical properties of soot can be eliminated using a more explicit representation of fractal particle morphology, we performed DDA calculations on bare and coated soot aggregates. Numerical soot aggregates with fractal dimensions ($D_f$) ranging from 1.8 (fractal) to 2.7 (nearly compact) were considered. These aggregates consisted of 120 primary spheres, 28 nm in diameter each. Their mass corresponded to the mass of 245.3 nm mobility diameter particles for fractal soot or 190.3 nm for compact CB, based on our mass-mobility measurements. A uniform coating model was chosen because such morphological mixing state is expected in the case of DOS based on previous work \citep{RN70}. Details of the aggregate generation, discretization, and coating are described in \citet{RN22}. To calculate enhancements, cross sections of coated particles were normalized by cross section of bare fractal particles with $D_f$ = 1.8. 
+
+Like with Mie calculations, DDA underestimates the absolute absorption and scattering cross sections of bare and coated particles by a large margin, as shown in Figure \ref{fig:dda}c,d. Relative enhancements also deviate from the experiment (Figure \ref{fig:dda}a,b), but generally to a lesser extent. For absorption, the difference in enhancements between aggregates of different $D_f$ is less significant, confirming that absorption is mostly affected by increasing coating volume and not restructuring. Scattering enhancements predicted by DDA for coated fractal aggregates with $D_f$ = 1.8 agree well with experimental results at low coating thicknesses, but start diverging at coating thicknesses above 20 nm (Figure \ref{fig:dda}). The scattering enhancement is overestimated most significantly for the aggregates of a higher $D_f$. 
+
+
+Although DDA can be used to calculate the optical properties of an aggregate of complex geometry, its prediction accuracy is dependent on how realistically the aggregate is represented. Electron microscopy images show the existence of a large number of morphological features in soot samples, such as polydispersity in primary particle size, non-spherical primary particles, and overlapping and necking between neighboring primary particles \citep{RN24,RN28}. To obtain closure with the experiment, these features must be included in the aggregate models used in DDA calculations, as they have an impact on the optical properties of soot \citep{teng2019accounting}. Among these features, necking is most significant, as it enhances the electromagnetic coupling between interacting primary particles, resulting in stronger absorption and scattering. Thus, the assumption of point-touch contacts between spherical primary particles of a constant diameter in our DDA simulations is likely to introduce discrepancy in the calculated optical properties of soot. For instance, in experiments we observe a slight decline in absorption enhancement at a coating thickness of around 20 nm, a trend not accounted for by DDA. We speculate that this trend in experimental data is due to breaking of necks in the aggregate. It is at 20 nm coating thickness that full compaction is reached, corresponding to the maximum number of necks in the aggregate becoming fractured.  
+
+To separate the contributions from restructuring and coating addition to light scattering, we compared scattering enhancements between coated-denuded experiments and DDA calculations on bare aggregates of different $D_f$ ($1.8$ to $2.7$), as shown in Figure \ref{fig:scat_denuded}. To overlay experimental scattering enhancements, which are a function of volume equivalent coating thickness, and modeled scattering enhancements, which are a function of $D_f$, coating thickness of 0 nm was set to be equivalent to $D_f$ = 1.8. Since we know from coated-denuded $\rm Gfd$ measurements that particles reach maximum compaction, we assumed that the highest coating thickness corresponds to $D_f$ of 2.7. An exponential decay function was used to map coating thicknesses to fractal dimensions between these two points, as described in supplemental information (Section \ref{s:sec:drve2df}). DDA calculations performed for 40-primary sphere aggregates, which correspond to 154 nm mobility diameter fractal particles, show an agreement with the experiment, pointing to the addition of coating as the major source of the discrepancy between experimental and DDA predicted scattering enhancements in coated soot aggregates. Choosing a more complex coating distribution model might have improved the agreement \citep{luo2019optical}, but mapping the actual coating distribution from microscopy images was not possible in the present study because relatively volatile DOS rapidly evaporated under high vacuum in the SEM instrument.  
+
+
+\begin{figure}[htp]
+    \centering
+    \resizebox{\columnwidth}{!}{\begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$E_\mathrm{abs}$,
+    xmin=0,
+    ymin=1,
+    ymax=1.6
+    ]
+        \addplot [color=tab_purple,mark=star] table [y=E_abs]{plots/enhancements_experiment/soot_coated.txt};
+        \addplot [dashed,thick,color=tab_blue,mark=otimes*,mark options={solid,thick}] table [y=E_abs] {plots/enhancements_dda/df_1_8.txt};
+        \addplot [dashed,thick,color=tab_orange,mark=square*,mark options={solid,thick}] table [y=E_abs] {plots/enhancements_dda/df_2_1.txt};
+        \addplot [dashed,thick,color=tab_grey,mark=triangle*,mark options={solid,thick}] table [y=E_abs] {plots/enhancements_dda/df_2_4.txt};
+        \addplot [dashed,thick,color=tab_red,mark=diamond*,mark options={solid,thick}] table [y=E_abs] {plots/enhancements_dda/df_2_7.txt};
+        \addplot [dotted,thick,color=tab_brown,mark=pentagon*,mark options={solid,thick}] table [col sep=tab,y=E_abs_mie] {plots/enhancements_mie/soot.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel=$E_\mathrm{sca}$,
+    legend pos=north west,
+    xmin=0,
+    legend cell align={left},
+    ymin=1,
+    ymax=25
+    ]
+        \addplot [color=tab_purple,mark=star] table [y=E_sca]{plots/enhancements_experiment/soot_coated.txt};
+        \addlegendentry{Experimental}
+        \addplot [dashed,thick,color=tab_blue,mark=otimes*,mark options={solid,thick}] table [y=E_sca] {plots/enhancements_dda/df_1_8.txt};
+        \addlegendentry{$D_f=1.8$}
+        \addplot [dashed,thick,color=tab_orange,mark=square*,mark options={solid,thick}] table [y=E_sca] {plots/enhancements_dda/df_2_1.txt};
+        \addlegendentry{$D_f=2.1$}
+        \addplot [dashed,thick,color=tab_grey,mark=triangle*,mark options={solid,thick}] table [y=E_sca] {plots/enhancements_dda/df_2_4.txt};
+        \addlegendentry{$D_f=2.4$}
+        \addplot [dashed,thick,color=tab_red,mark=diamond*,mark options={solid,thick}] table [y=E_sca] {plots/enhancements_dda/df_2_7.txt};
+        \addlegendentry{$D_f=2.7$}
+        \addplot [dotted,thick,color=tab_brown,mark=pentagon*,mark options={solid,thick}] table [col sep=tab,y=E_sca_mie] {plots/enhancements_mie/soot.txt};
+        \addlegendentry{Mie}
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(b)}};
+    \end{axis}
+    \end{tikzpicture}}
+    \resizebox{\columnwidth}{!}{\begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel={$C_\mathrm{abs},\ \rm \mu m^2$},
+    xmin=0
+    ]
+        \addplot [color=tab_purple,mark=star] table [y=C_abs]{plots/absolute_experimental/soot_coated.txt};
+        \addplot [dashed,thick,color=tab_blue,mark=otimes*,mark options={solid,thick}] table [y=C_abs] {plots/absolute_dda/df_1_8.txt};
+        \addplot [dashed,thick,color=tab_orange,mark=square*,mark options={solid,thick}] table [y=C_abs] {plots/absolute_dda/df_2_1.txt};
+        \addplot [dashed,thick,color=tab_grey,mark=triangle*,mark options={solid,thick}] table [y=C_abs] {plots/absolute_dda/df_2_4.txt};
+        \addplot [dashed,thick,color=tab_red,mark=diamond*,mark options={solid,thick}] table [y=C_abs] {plots/absolute_dda/df_2_7.txt};
+        \addplot [dotted,thick,color=tab_brown,mark=pentagon*,mark options={solid,thick}] table [col sep=tab,y=C_abs_mie] {plots/absolute_mie/soot.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(c)}};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}
+    \begin{axis}[
+    xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+    ylabel={$C_\mathrm{sca},\ \rm \mu m^2$},
+    legend pos=north west,
+    xmin=0,
+    legend cell align={left}
+    ]
+        \addplot [color=tab_purple,mark=star] table [y=C_sca]{plots/absolute_experimental/soot_coated.txt};
+        \addplot [dashed,thick,color=tab_blue,mark=otimes*,mark options={solid,thick}] table [y=C_sca] {plots/absolute_dda/df_1_8.txt};
+        \addplot [dashed,thick,color=tab_orange,mark=square*,mark options={solid,thick}] table [y=C_sca] {plots/absolute_dda/df_2_1.txt};
+        \addplot [dashed,thick,color=tab_grey,mark=triangle*,mark options={solid,thick}] table [y=C_sca] {plots/absolute_dda/df_2_4.txt};
+        \addplot [dashed,thick,color=tab_red,mark=diamond*,mark options={solid,thick}] table [y=C_sca] {plots/absolute_dda/df_2_7.txt};
+        \addplot [dotted,thick,color=tab_brown,mark=pentagon*,mark options={solid,thick}] table [col sep=tab,y=C_sca_mie] {plots/absolute_mie/soot.txt};
+        \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(d)}};
+    \end{axis}
+    \end{tikzpicture}}
+    \caption{Comparison of DDA calculations for aggregates of different compactness coated by DOS against experimental measurements and Mie calculations for coated volume equivalent spheres: (a) absorption and (b) scattering enhancements; (c) absorption and (d) absolute cross sections.}
+    \label{fig:dda}
+\end{figure}
+
+%The deviation between DDA calculations and experimental results can be caused by several factors, including necking in soot aggregates and model-dependent refractive index. In the real soot aggregates there are necks between primary particles that are not present in our model. The necks add extra mass and increase primary particle-primary particle coupling \citep{RN28,RN74}, resulting in stronger absorption and scattering. In experimental measurements, initial scattering and absorption cross sections are higher than in our DDA modeled aggregates (Figure \ref{s:fig:dda}), resulting in a lower enhancement calculated from experimental data in comparison to enhancement based on modeled data, as an equal absolute increase in absorption or scattering will cause a lower enhancement in the case where necks are present. It is interesting that Mie provides an equally good or an even better estimate than DDA in some cases. Mie is a simple model and using it to predict optics of fractal soot particles involves several assumptions. These assumptions may bias the results high or low, but when combined the biases cancel out and result in a good estimate of optical properties. Another possible explanation why Mie provides a good estimate for optical enhancements of soot is that the material refractive index has been inverted from experimental data using Mie theory \citep{RN23}. In that case, the refractive index would be biased to minimize the difference between experimental data and optical properties predicted with Mie. That would also explain the discrepancy between experimental data and DDA calculations, as for DDA we need the true material refractive index and not some effective model-dependent value. Variability in the degree of graphitization and the number of void fractions can also cause the refractive index of soot to vary \citep{RN72} which introduces additional model uncertainties. The deviation in the calculated optical properties of soot from measurement data points to the difficulty in creating representative soot aggregates even for detailed algorithms such as DDA.}
+
+% pdf\Aerosols\Soot - optics\Doner_2017_Impact of necking and overlapping on radiative properties of coated soot aggregates.pdf
+% pdf\Aerosols\Soot - sintering\Skorupski_2014_1-s2.0-S0022407314000983-main.pdf
+% Also check references in Ogo's dissertation in the chapter where she added necking
+
+%\textcolor{red}{Note: Ogo's text: DDA accuracy is also a function of the refractive index used for the discretized soot aggregate. The refractive index is one of the most uncertain aerosol properties because it cannot be measured directly. Instead, light scattering and extinction measurements are converted to a refractive index using an optical model or a set of relations that adopt functions based on Mie theory such as the one provided by Chang and Charamapolous (1990). Variability in the degree of graphitization and the number of void fractions can also cause the refractive index of soot to vary (Kahnert and Kanngiesser, 2020) which introduces additional model uncertainties. The deviation in the calculated optical properties of soot from measurement data points to the difficulty in creating representative soot aggregates even for detailed algorithms such as DDA.}
+
+
+
+% \begin{figure}[htp]
+%     \centering
+%     \resizebox{\columnwidth}{!}{\begin{tikzpicture}
+%     \begin{axis}[
+%     xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+%     ylabel=$E_\mathrm{abs}$,
+%     legend pos=north west,
+%     xmin=0,
+%     ymin=1,
+%     legend cell align={left}
+%     ]
+%         \addplot [only marks,color=tab_blue,mark=otimes*] table [col sep=tab,y=E_abs] {plots/enhancements_experiment/soot_coated.txt};
+%         \addlegendentry{Experimental}
+%         \addplot [no markers,color=tab_blue] table [col sep=tab,y=E_abs] {plots/dda_combined/dda_combined.txt};
+%         \addlegendentry{DDA}
+%         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
+%     \end{axis}
+%     \end{tikzpicture}
+%     \begin{tikzpicture}
+%     \begin{axis}[
+%     xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+%     ylabel=$E_\mathrm{sca}$,
+%     xmin=0,
+%     ymin=1,
+%     ]
+%         \addplot [only marks,color=tab_blue,mark=otimes*] table [col sep=tab,y=E_sca] {plots/enhancements_experiment/soot_coated.txt};
+%         \addplot [no markers,color=tab_blue] table [col sep=tab,y=E_sca] {plots/dda_combined/dda_combined.txt};
+%         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(b)}};
+%     \end{axis}
+%     \end{tikzpicture}}
+%     \caption{Caption}
+%     \label{fig:my_label}
+% \end{figure}
+
+\begin{figure}[htp]
+    \centering
+    \begin{tikzpicture}
+
+    \begin{axis}[master axis,
+        ymin=1,
+        xmin=0,xmax=56.020227,
+        enlarge x limits=false,
+        xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
+        ylabel=$E_\mathrm{sca}$,
+        legend pos=north west,
+        legend cell align={left}
+    ]
+    \addplot table {plots/dda_bare/dda_bare.txt};
+    \addlegendentry{DDA}
+    \addplot table[y=E_sca] {plots/enhancements_experiment/soot_heated.txt};
+    \addlegendentry{Experimental}
+    \end{axis}
+    
+    \begin{axis}[slave axis,xlabel=$D_f$]\end{axis}
+    
+    \end{tikzpicture}
+    
+    \caption{Experimental scattering enhancements for coated-denuded aggregates versus volume equivalent coating thickness and DDA-calculated scattering enhancements versus fractal dimension}
+    \label{fig:scat_denuded}
+\end{figure}
+

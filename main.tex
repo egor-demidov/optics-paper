@@ -1,0 +1,290 @@
+%% 
+%% Copyright 2007-2020 Elsevier Ltd
+%% 
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for Elsevier's document class `elsarticle'
+%% with harvard style bibliographic references
+
+% == DOUBLE SPACED ==
+%\documentclass[review,12pt,authoryear]{elsarticle}
+% == SINGLE SPACED ==
+\documentclass[12pt,authoryear]{elsarticle}
+%\documentclass[final,5p,times,authoryear]{elsarticle}
+\usepackage{perpage}
+\MakePerPage{footnote}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times,authoryear]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
+
+%% For including figures, graphicx.sty has been loaded in
+%% elsarticle.cls. If you prefer to use the old commands
+%% please give \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathptmx}
+\usepackage{tablefootnote}
+\usepackage{geometry}
+\usepackage{lineno}
+\usepackage{pgfplots}
+\usepackage{multirow,tabularx}
+
+% \usetikzlibrary{external}
+% \tikzexternalize[prefix=tikz/]
+
+\pgfplotsset{compat=1.18}
+
+\pgfkeys{/pgfplots/.cd,master axis/.style={
+    scale only axis,
+    enlarge x limits=false,
+    axis x line*=bottom,
+    xticklabel shift=3pt,
+    after end axis/.code={
+      \pgfkeys{/pgf/fpu=true,/pgf/fpu/output format=fixed}
+      \pgfmathparse{\pgfkeysvalueof{/pgfplots/xmin}}
+      \global\let\masterxmin=\pgfmathresult
+      \pgfmathparse{\pgfkeysvalueof{/pgfplots/xmax}}
+      \global\let\masterxmax=\pgfmathresult
+      \pgfkeys{/pgf/fpu=false}
+    }
+  },
+  slave axis/.style={
+    scale only axis,enlarge x limits=false,
+    axis x line*=top,
+    axis y line=none,
+    xmin=\masterxmin,xmax=\masterxmax,ymin=0,ymax=1,
+    scaled x ticks=false,
+    xtick={0,56.020227/ln((2.8-2.7)/(2.8-1.8))*ln((2.8-2.0)/(2.8-1.8)),56.020227/ln((2.8-2.7)/(2.8-1.8))*ln((2.8-2.2)/(2.8-1.8)),56.020227/ln((2.8-2.7)/(2.8-1.8))*ln((2.8-2.4)/(2.8-1.8)),56.020227/ln((2.8-2.7)/(2.8-1.8))*ln((2.8-2.6)/(2.8-1.8)),56.020227/ln((2.8-2.7)/(2.8-1.8))*ln((2.8-2.7)/(2.8-1.8))},
+    xticklabel={
+      \pgfkeys{/pgf/fpu}
+      \pgfmathparse{2.8-(2.8-1.8)*exp(-\tick/(-56.020227/ln((2.8-2.7)/(2.8-1.8))}
+      \pgfmathprintnumber{\pgfmathresult}
+    }
+  }
+}
+
+\definecolor{tab_blue}{rgb}{0.1216, 0.4667, 0.7059}
+\definecolor{tab_orange}{rgb}{1.0000, 0.4980, 0.0549}
+\definecolor{tab_grey}{rgb}{0.4980, 0.4980, 0.4980}
+\definecolor{tab_red}{rgb}{0.8392, 0.1529, 0.1569}
+\definecolor{tab_brown}{rgb}{0.5490, 0.3373, 0.2941}
+\definecolor{tab_purple}{rgb}{0.5804, 0.4039, 0.7412}
+
+\geometry{letterpaper, margin=1in}
+
+\usepackage{xr}
+\makeatletter
+\newcommand*{\addFileDependency}[1]{% argument=file name and extension
+  \typeout{(#1)}% latexmk will find this if $recorder=0 (however, in that case, it will ignore #1 if it is a .aux or .pdf file etc and it exists! if it doesn't exist, it will appear in the list of dependents regardless)
+  \@addtofilelist{#1}% if you want it to appear in \listfiles, not really necessary and latexmk doesn't use this
+  \IfFileExists{#1}{}{\typeout{No file #1.}}% latexmk will find this message if #1 doesn't exist (yet)
+}
+\makeatother
+
+\newcommand*{\myexternaldocument}[1]{%
+    \externaldocument{#1}%
+    \addFileDependency{#1.tex}%
+    \addFileDependency{#1.aux}%
+}
+
+\myexternaldocument{supplemental}
+
+\graphicspath{{images/}}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+%% \usepackage{lineno}
+
+\journal{Journal of Aerosol Science}
+
+\begin{document}
+%% Left-align equations:
+%% \setlength{\mathindent}{0cm}
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \affiliation for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \affiliation{organization={},
+%%            addressline={}, 
+%%            city={},
+%%            postcode={}, 
+%%            state={},
+%%            country={}}
+%% \fntext[label3]{}
+
+\title{Differences and similarities in optical properties of coated fractal soot and its surrogates}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{}
+%% \affiliation[label1]{organization={},
+%%             addressline={},
+%%             city={},
+%%             postcode={},
+%%             state={},
+%%             country={}}
+%%
+%% \affiliation[label2]{organization={},
+%%             addressline={},
+%%             city={},
+%%             postcode={},
+%%             state={},
+%%             country={}}
+
+\affiliation[inst2]{organization={Department of Chemistry and Environmental Science, New Jersey Institute of Technology},%Department and Organization
+            city={Newark},
+            postcode={07102}, 
+            state={New Jersey},
+            country={United States}}
+
+\affiliation[inst1]{organization={Department of Chemical and Materials Engineering, New Jersey Institute of Technology},%Department and Organization
+            city={Newark},
+            postcode={07102}, 
+            state={New Jersey},
+            country={United States}}
+
+\affiliation[inst3]{organization={Chemical Engineering Department, University of New Haven},%Department and Organization
+            city={West Haven},
+            postcode={06516}, 
+            state={Connecticut},
+            country={United States}}
+
+
+\affiliation[inst4]{organization={Now at: Center for Devices and Radiological Health, Food and Drug Administration},
+            state={Maryland},
+            country={United States}}
+
+\affiliation[inst5]{organization={Now at: Brookhaven National Laboratory},
+            city={Upton},
+            postcode={11973}, 
+            state={New York},
+            country={United States}}
+
+\author[inst2]{Egor V. Demidov}
+\author[inst1,inst5]{Ogochukwu Y. Enekwizu}
+\author[inst2,inst4]{Ali Hasani}
+\author[inst3]{Chong Qiu}
+\author[inst2,inst1]{Alexei F. Khalizov}
+
+\begin{abstract}
+\input{sections/abstract.tex}
+\end{abstract}
+
+%%Research highlights
+% \begin{highlights}
+% \item Carbon black is an appropriate surrogate for heavily aged soot particles
+% \item Nigrosin is not representative of soot but can represent light-absorbing aerosols
+% \item Mie provides reasonable closure after accounting for multiply charged particles
+% \item Multiply charged particles increase absolute cross-sections but reduce enhancements
+% \item Carbon black particles can be generated in compact and semi-fractal forms
+% \item Light absorption by fractal soot increases only due to lensing caused by coating 
+% \item Light scattering by fractal soot increases due to lensing and restructuring
+% \end{highlights}
+
+\begin{keyword}
+aerosol \sep soot \sep black carbon \sep carbon black \sep nigrosin \sep aerosol aging \sep light absorption \sep light scattering 
+% %% keywords here, in the form: keyword \sep keyword
+% keyword one \sep keyword two
+% %% PACS codes here, in the form: \PACS code \sep code
+% \PACS 0000 \sep 1111
+% %% MSC codes here, in the form: \MSC code \sep code
+% %% or \MSC[2008] code \sep code (2000 is the default)
+% \MSC 0000 \sep 1111
+\end{keyword}
+
+\end{frontmatter}
+
+\renewcommand{\thefootnote}{\textit{\alph{footnote}}}
+
+%% \linenumbers
+%\linenumbers
+%% main text
+%% For citations use: 
+%%       \citet{<label>} ==> Jones et al. (2015)
+%%       \citep{<label>} ==> (Jones et al., 2015)
+
+\section*{Nomenclature}
+\input{sections/nomenclature}
+
+\section{Introduction}
+\input{sections/introduction.tex}
+
+\section{Methodology}
+\input{sections/methodology.tex}
+
+\section{Results and discussion}
+\input{sections/results.tex}
+
+\section{Conclusion}
+\input{sections/conclusion.tex}
+
+\section*{Acknowledgement}
+\input{sections/accknowledgement}
+
+\section*{Author contributions}
+E. D. - conceptualization, methodology, validation, investigation, writing - original draft, visualization. O. E. - methodology, investigation, validation. A. H. - investigation, visualization. C. Q. - conceptualization, methodology. A. K. - conceptualization, methodology, software, validation, resources, writing - review and editing, supervision, project administration, funding acquisition.
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal section
+
+%% If you have bibdatabase file and want bibtex to generate the
+%% bibitems, please use
+%%
+\bibliographystyle{elsarticle-harv} 
+\bibliography{cas-refs}
+
+%% else use the following coding to input the bibitems directly in the
+%% TeX file.
+
+% \begin{thebibliography}{00}
+
+% %% \bibitem[Author(year)]{label}
+% %% Text of bibliographic item
+
+% \bibitem[ ()]{}
+
+% \end{thebibliography}
+\end{document}
+
+\endinput
+%%
+%% End of file `elsarticle-template-harv.tex'.
