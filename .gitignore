@@ -17,5 +17,6 @@
 !tikz/**
 !home/
 !home/**
+!*.cls
 !*.sh
 !.gitignore
