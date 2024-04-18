@@ -15,5 +15,7 @@
 !sections/**
 !tikz/
 !tikz/**
+!home/
+!home/**
 !*.sh
 !.gitignore
