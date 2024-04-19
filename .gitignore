@@ -19,4 +19,7 @@
 !home/**
 !*.cls
 !*.sh
+!optics-paper-3644567e603ba3640b18f1cd82b42f9f48da5199.zip
+!.github/
+!.github/**
 !.gitignore
