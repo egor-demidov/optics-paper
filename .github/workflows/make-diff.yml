@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Generate a diff file
-        uses: egor-demidov/create-latexdiff@v1
+        uses: egor-demidov/create-latexdiff@v1.1
       - name: Archive compiled artifact
         uses: actions/upload-artifact@v3
         with:
