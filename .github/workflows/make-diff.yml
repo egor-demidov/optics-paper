@@ -27,23 +27,14 @@ jobs:
           latexmk -pdf -interaction=nonstopmode main.tex
       - name: Compile the current version
         run: |
-          echo "Current directory: $(pwd)"
-      - name: Build
+          latexmk -pdf -interaction=nonstopmode main.tex
+      - name: Generate and compile a diff file
         run: |
-          mkdir dist/soot-dem/bin
-          mkdir cmake-build
-          cd cmake-build
-          cmake -DCMAKE_BUILD_TYPE=Release ..
-          cmake --build .
-          strip aggregate_deposition
-          strip afm_necking_fraction
-          strip restructuring
-          mv ./aggregate_deposition ../dist/soot-dem/bin/
-          mv ./afm_necking_fraction ../dist/soot-dem/bin/
-          mv ./restructuring ../dist/soot-dem/bin/
+          latexdiff --flatten optics-paper-3644567e603ba3640b18f1cd82b42f9f48da5199/main.tex main.tex > diff.tex
+          latexmk -pdf -interaction=nonstopmode diff.tex
       - name: Archive compiled artifact
         uses: actions/upload-artifact@v3
         with:
-          name: soot-dem-linux-gnu-x86_64
+          name: diff-file
           path: |
-            dist
+            diff.pdf
