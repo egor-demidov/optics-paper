@@ -5,7 +5,7 @@ The system used to generate and process aerosols is illustrated in Figure \ref{f
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{system_diagram.png}
-\caption{Aerosol generation and processing system}
+\caption{(a) Aerosol generation and processing system, (b) dilution configuration used to generate agglomerated CB, and (c) dilution configuration used to generate compact CB}
 \label{fig:system}
 \end{figure}
 
@@ -19,23 +19,23 @@ Adjusting the temperature of the coating chamber allowed the control of DOS cond
 
 Mass measurements were used to determine the amount of coating condensed and electrical mobility diameter was used to quantify the extent of restructuring. Mass of processed particles, $m$ was normalized by mass of fresh particles $m_0$ to obtain the mass growth factor.
 \begin{equation}
-\mathrm{Gfm}=\frac{m}{m_0}
+GF_m=\frac{m}{m_0}
 \label{eq:gfm}
 \end{equation}
 Mass growth factor was converted into volume-equivalent coating thickness, $\Delta r_{ve}$, to facilitate the comparison in the amount of coating gained by particles of different initial volume-equivalent diameters \citep{RN37}.
 \begin{equation}
 \Delta r_{ve}=\frac{1}{2}D_{ve,0}\left(\sqrt[3]{\frac{V}{V_0}}-1\right)=
-\frac{1}{2}D_{ve,0}\left(\sqrt[3]{1+\frac{\rho_{\rm core}}{\rho_{\rm shell}}\left(\mathrm{Gfm}-1\right)}-1\right)
+\frac{1}{2}D_{ve,0}\left(\sqrt[3]{1+\frac{\rho_{\rm core}}{\rho_{\rm shell}}\left(GF_m-1\right)}-1\right)
 \label{eq:drve}
 \end{equation}
 Where $D_{\rm ve,0}$ is volume-equivalent diameter of a bare particles, $V$ is volume of a coated particle, $V_0$ is volume of a bare particle, $\rho_{\rm core}$ is material density of a bare particle, and $\rho_{\rm shell}$ is density of the coating material.
 
 Similarly, the electrical mobility diameter of processed particles, $D$ was normalized by the electrical mobility diameter of fresh particles, $D_0$, to obtain the electrical mobility diameter growth factor.
 \begin{equation}
-\mathrm{Gfd}=\frac{D}{D_0}
+GF_d=\frac{D}{D_0}
 \label{eq:gfd}
 \end{equation}
-$GF_{\rm d}$ was obtained from Tandem DMA (TDMA) scans, where particles were size-classified with DMA1, processed by coating or coating-denuding, and then their size distribution was measured with DMA2.
+$GF_{d}$ was obtained from Tandem DMA (TDMA) scans, where particles were size-classified with DMA1, processed by coating or coating-denuding, and then their size distribution was measured with DMA2.
 
 \subsection{Particle sample collection and imaging}
 
@@ -48,7 +48,7 @@ Samples of size-classified unprocessed aerosol particles were collected on silic
 
 \subsection{Optical measurements}
 
-To measure number density and optical properties of aerosol concurrently, a makeup flow of 0.87 lpm was added and then the sample flow was split iso-kinetically in two separate flows directed to CAPS PM\textsubscript{SSA} (0.87 lpm) and CPC (1.0 lpm), respectively. An orifice inside the valve ensured mixing of the aerosol stream and the dilution air stream. The distances from the split to CAPS PM\textsubscript{SSA} and CPC were adjusted to ensure equal wall losses, so that the particle number density measured by the CPC corresponded to the number density within the CAPS PM\textsubscript{SSA} cell. We found that it was crucial to install a denuder filled with XB-17 (a mixture of activated charcoal and permanganate-impregnated alumina, General Carbon Corp.) after DMA1 during experiments with flame-generated soot to remove traces of NO\textsubscript{2} produced by the burner. NO\textsubscript{2} is a strong light absorber at 525 nm and its concentration is highly sensitive to combustion conditions. In the absence of the denuder, light extinction measurements were subject to significant variability, requiring that baselines to be taken frequently.
+To measure number density and optical properties of aerosol concurrently, a makeup flow of 0.87 lpm was added and then the sample flow was split iso-kinetically in two separate flows directed to CAPS PM\textsubscript{SSA} (0.87 lpm) and CPC (1.0 lpm), respectively. To ensure proper mixing, the splitting point was placed ~1 m downstream from the dilution point. The ball valve at the dilution point served as an orifice to create turbulence and promote mixing of streams. The splitting was done with a tee, where the outlets were on a straight line. The tee was placed at a such distance from CAPS and CPC, that particle concentrations at the CAPS inlet and the CPC inlet were idential. An orifice inside the valve ensured mixing of the aerosol stream and the dilution air stream. The distances from the split to CAPS PM\textsubscript{SSA} and CPC were adjusted to ensure equal wall losses, so that the particle number density measured by the CPC corresponded to the number density within the CAPS PM\textsubscript{SSA} cell. We found that it was crucial to install a denuder filled with XB-17 (a mixture of activated charcoal and permanganate-impregnated alumina, General Carbon Corp.) after DMA1 during experiments with flame-generated soot to remove traces of NO\textsubscript{2} produced by the burner. NO\textsubscript{2} is a strong light absorber at 525 nm and its concentration is highly sensitive to combustion conditions. In the absence of the denuder, light extinction measurements were subject to significant variability, requiring that baselines to be taken frequently.
 
 The CAPS PM\textsubscript{SSA} measured extinction and scattering coefficients ($b$) of bare and processed aerosol particles. Absorption coefficients were calculated as a difference of extinction and scattering coefficients \citep{RN7,RN50}.
 \begin{equation}
@@ -65,7 +65,7 @@ To obtain accurate optical data, scattering and extinction coefficients were rec
 
 \subsection{Numerical aggregate generation for discrete dipole approximation calculations}
 
-Soot aggregates of fractal ($D_f < 2.1$) and compact ($D_f > 2.1$) morphologies were simulated using a cluster-cluster aggregation (CCA) algorithm developed by \citet{RN35}. The CCA method, described here in brief, is based on a hierarchical scheme of aggregation of smaller sub-clusters, which obey the fractal scaling law \citep{jullien1987aggregation},
+Soot aggregates of fractal ($D_f < 2.1$) and compact ($D_f > 2.1$) morphologies were simulated using a cluster-cluster aggregation (CCA) algorithm developed by \citet{RN35}. The CCA algorithm, described here in brief, is based on a hierarchical scheme of aggregation of smaller sub-clusters, which obey the fractal scaling law \citep{jullien1987aggregation},
 \begin{equation}
 N_s=k_0\left(\frac{2R_s}{d_p}\right)^{D_f}
 \label{eq:fractal}
@@ -97,19 +97,19 @@ DDA \citep{RN33} is a versatile approach for predicting the optical properties o
 
 Optical modeling was performed using the refractive indices shown in Table \ref{tab:refindices}. The refractive index of soot is based on the expression reported by \citet{RN23}. For a wavelength of 530 nm, the refractive index was $1.73+0.6i$, falling within the range recommended by \citet{RN34} for visible light. The refractive index of the organic coating was assumed to be $1.43+0i$ and is representative of many organic materials \citep{crchandbook}, including DOS, which was used in our experiments. By comparing DOS with other chemicals of similar structure, we found that the refractive index varied by less than  $\pm0.03$, causing a $\pm 3.5\%$ variation in scattering and $\pm 2.5\%$ variation in absorption by a 150 nm absorbing sphere with a 20 nm coating. Such variation is within the error range of our experimental measurements.
 
-Optical measurements were conducted at 525 nm wavelength, while DDA calculations were performed for 530 nm wavelength. According to our sensitivity analysis, the difference in scattering is $0.4 \%$ and the difference in absorption is $0.3 \%$ for a 150 nm absorbing sphere with a 20 nm coating at 525 and 530 nm wavelength. This difference is within the error of our experimental measurements, which means that DDA calculations are representative of experimental data.
+Optical measurements were conducted at 525 nm wavelength, while DDA calculations were performed for 530 nm wavelength. According to our sensitivity analysis, the difference in scattering is $0.4 \%$ and the difference in absorption is $0.3 \%$ for a 150 nm absorbing sphere with a 20 nm coating at 525 nm and 530 nm wavelength. This difference is within the error of our experimental measurements, which means that DDA calculations are representative of experimental data.
 
 \begin{table}[ht]
 \caption{Refractive indices of materials used in optical calculations}
 \label{tab:refindices}
 \begin{center}
-\begin{tabular}{ l c }
+\begin{tabular}{l c}
  \hline
- \multicolumn{1}{c}{Material} & Complex refractive index \\
+ \multicolumn{1}{c}{Material} & Complex refractive index at 530 nm \\
  \hline
- Soot/carbon black\textsuperscript{\textit{a}} & 1.73+0.60i\\
- Nigrosin\textsuperscript{\textit{b}} & 1.71+0.27i\\
- Liquid organic compounds\textsuperscript{\textit{c}} & 1.43+0.00i\\
+ Soot/carbon black\textsuperscript{\textit{a}} & $1.73+0.60i$\\
+ Nigrosin\textsuperscript{\textit{b}} & $1.71+0.27i$\\
+ Liquid organic compounds\textsuperscript{\textit{c}} & $1.43+0.00i$\\
  \hline
 \end{tabular}
 \end{center}
