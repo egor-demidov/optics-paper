@@ -222,35 +222,35 @@ To quantify the number fraction of doubly charged particles, each mode on the re
  \label{s:fig:recharged_all}
 \end{figure}
 
-\subsection{Effect of multiple charging on particle mass measurements}
-\label{s:sec:multiple_charging_and_mass}
-
-The relationship in Equation \ref{s:eq:mult_charging} is used to determine the effective mass of multiply charged particles that is the mass that will be measured by the APM. The apparent mass is lower than the true mass by a factor of $n_1$/$n_2$.
-
-\begin{equation}
-    \label{s:eq:mult_charging}
-    \frac{m_2}{m_1}=\frac{n_1}{n_2}\left(\frac{D_2}{D_1}\right)^\varepsilon
-\end{equation}
-
-\noindent In equation \ref{s:eq:mult_charging}, $m_1$ and $m_2$ are the apparent masses of particles carrying $n_1$ and $n_2$ elementary charges, $D_1$ and $D_2$ are the electrical mobility diameters of the particles, and $\varepsilon$ is the mass-mobility exponent. Note that $\varepsilon = 3$ for spherical particles and $\varepsilon > 1$ for non-spherical particles, which accounts for the variation of effective density of such particles with size.
-
-\begin{table}[ht]
-\caption{Electrical mobility diameters and masses of singly and doubly charged particles}
-\label{s:tab:double_charges}
-\begin{center}
-\begin{tabular}{ c c c c } 
- \hline
- $D_1$, nm & $D_2$, nm & $D_2/D_1$ & $m_2/m_1$\tablefootnote{$m_2/m_1=0.5\times (D_2/D_1)^3$; the multiplier $0.5$ accounts for the presence of two charges on particles with mass $m_2$. These mass ratios assume an $\varepsilon$ of 3 and are not applicable to all types of particles} \\
- \hline
-150 & 236 & 1.57 & 1.95\\
-240 & 397 & 1.66 & 2.27\\
-350 & 603 & 1.72 & 2.56\\
- \hline
-\end{tabular}
-\end{center}
-\end{table}
-
-\noindent As seen in Table \ref{s:tab:double_charges}, spherical doubly charged particles of the same electrical mobility diameter as singly charged particles have their apparent mass approximately twice the mass of singly charged particles on an APM scan. Hence, in some cases these doubly charged particles can contribute to the right shoulder of the main mass distribution, biasing the mean mass high. For each $D_1$, the fraction of doubly charged particles can be estimated based on total aerosol size distribution and charging probability \citep{RN10}. The fact that PSL produced the mass-mobility exponent of 3.00 supports this hypothesis, since for PSL spheres, which are truly monodisperse in suspension, doubly charged particles are discarded by DMA during mobility classification.
+% \subsection{Effect of multiple charging on particle mass measurements}
+% \label{s:sec:multiple_charging_and_mass}
+%
+% The relationship in Equation \ref{s:eq:mult_charging} is used to determine the effective mass of multiply charged particles that is the mass that will be measured by the APM. The apparent mass is lower than the true mass by a factor of $n_1$/$n_2$.
+%
+% \begin{equation}
+%     \label{s:eq:mult_charging}
+%     \frac{m_2}{m_1}=\frac{n_1}{n_2}\left(\frac{D_2}{D_1}\right)^\varepsilon
+% \end{equation}
+%
+% \noindent In equation \ref{s:eq:mult_charging}, $m_1$ and $m_2$ are the apparent masses of particles carrying $n_1$ and $n_2$ elementary charges, $D_1$ and $D_2$ are the electrical mobility diameters of the particles, and $\varepsilon$ is the mass-mobility exponent. Note that $\varepsilon = 3$ for spherical particles and $\varepsilon > 1$ for non-spherical particles, which accounts for the variation of effective density of such particles with size.
+%
+% \begin{table}[ht]
+% \caption{Electrical mobility diameters and masses of singly and doubly charged particles}
+% \label{s:tab:double_charges}
+% \begin{center}
+% \begin{tabular}{ c c c c }
+%  \hline
+%  $D_1$, nm & $D_2$, nm & $D_2/D_1$ & $m_2/m_1$\tablefootnote{$m_2/m_1=0.5\times (D_2/D_1)^3$; the multiplier $0.5$ accounts for the presence of two charges on particles with mass $m_2$. These mass ratios assume an $\varepsilon$ of 3 and are not applicable to all types of particles} \\
+%  \hline
+% 150 & 236 & 1.57 & 1.95\\
+% 240 & 397 & 1.66 & 2.27\\
+% 350 & 603 & 1.72 & 2.56\\
+%  \hline
+% \end{tabular}
+% \end{center}
+% \end{table}
+%
+% \noindent As seen in Table \ref{s:tab:double_charges}, spherical doubly charged particles of the same electrical mobility diameter as singly charged particles have their apparent mass approximately twice the mass of singly charged particles on an APM scan. Hence, in some cases these doubly charged particles can contribute to the right shoulder of the main mass distribution, biasing the mean mass high. For each $D_1$, the fraction of doubly charged particles can be estimated based on total aerosol size distribution and charging probability \citep{RN10}. The fact that PSL produced the mass-mobility exponent of 3.00 supports this hypothesis, since for PSL spheres, which are truly monodisperse in suspension, doubly charged particles are discarded by DMA during mobility classification.
 % The impact of multiple charging on the mass-mobility exponent was estimated from size distribution of nigrosin and charging probabilities and results are available  in supplemental information (Table S, Figure S, Text S?).
 
 % \begin{figure}[htp]
@@ -282,7 +282,7 @@ Relationship between the mass growth factor ($\rm Gfm$) and volume-equivalent co
 \begin{figure}[htp]
 \centering
 \includegraphics[scale=0.7]{images/fig_supp_drve.eps}
-\caption{Volume equivalent coating thickness vs mass growth factor (markers at every 5\textsuperscript{th} point)}
+\caption{Volume equivalent coating thickness \textit{vs} mass growth factor (markers at every 5\textsuperscript{th} point)}
 \label{s:fig:drve}
 \end{figure}
 
@@ -311,7 +311,7 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ymin=1.0e-2,
     ymax=4.5e-2
     ]
-        \addplot [only marks,color=tab_blue,mark=otimes*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_abs,y error=C_abs_err] {plots/absolute_experimental/soot_coated.txt};
+        \addplot [only marks,color=tab_blue,mark=otimes*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_abs,y error=C_abs_err_res] {plots/absolute_experimental/soot_coated.txt};
         \addlegendentry{Experimental}
         \addplot [no markers,color=tab_blue] table [col sep=tab,y=C_abs_mie] {plots/absolute_mie/soot.txt};
         \addlegendentry{Mie(+)}
@@ -320,7 +320,7 @@ Absorption and scattering cross sections that were used to calculate enhancement
         \addplot [ultra thick,dotted,no markers,color=tab_blue] table [col sep=tab,y=C_abs_rdg] {plots/absolute_mie/soot.txt};
         \addlegendentry{RDG/Mie}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{BC}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Soot, D\textsubscript{ve} 137 nm}};
     \end{axis}
     \end{tikzpicture}
     \begin{tikzpicture}
@@ -329,17 +329,17 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ylabel={$C_\mathrm{abs},\ \mathrm{\mu m}^2$},
     legend pos=north west,
     legend cell align={left},
-    ymin=1.0e-2,
+    ymin=0.5e-2,
     ymax=4.5e-2
     ]
-        \addplot [only marks,color=tab_orange,mark=square*] table [col sep=tab,y=C_abs] {plots/absolute_experimental/nigrosin.txt};
+        \addplot [only marks,color=tab_orange,mark=square*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_abs,y error=C_abs_err_res] {plots/absolute_experimental/nigrosin.txt};
         \addlegendentry{Experimental}
         \addplot [no markers,color=tab_orange] table [col sep=tab,y=C_abs_mie] {plots/absolute_mie/nigrosin.txt};
         \addlegendentry{Mie(+)}
         \addplot [ultra thick,dashed,no markers,color=tab_orange] table [col sep=tab,y=C_abs_corr] {plots/absolute_mie/nigrosin.txt};
         \addlegendentry{Mie(++)}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(b)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Nigrosin}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Nigrosin, D\textsubscript{ve} 150 nm}};
     \end{axis}
     \end{tikzpicture}}
     \resizebox{\columnwidth}{!}{\begin{tikzpicture}
@@ -351,7 +351,7 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ymin=0.2e-2,
     ymax=7.5e-2
     ]
-        \addplot [only marks,color=tab_grey,mark=triangle*] table [col sep=tab,y=C_abs] {plots/absolute_experimental/cb_cmp_coated.txt};
+        \addplot [only marks,color=tab_grey,mark=triangle*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_abs,y error=C_abs_err_res] {plots/absolute_experimental/cb_cmp_coated.txt};
         \addlegendentry{Experimental}
         \addplot [no markers,color=tab_grey] table [col sep=tab,y=C_abs_mie] {plots/absolute_mie/cb_cmp.txt};
         \addlegendentry{Mie(+)}
@@ -360,7 +360,7 @@ Absorption and scattering cross sections that were used to calculate enhancement
         \addplot [ultra thick,dotted,no markers,color=tab_grey] table [col sep=tab,y=C_abs_rdg] {plots/absolute_mie/cb_cmp.txt};
         \addlegendentry{RDG/Mie}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(c)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{cmp}}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{cmp}, D\textsubscript{ve} 111 nm}};
     \end{axis}
     \end{tikzpicture}
     \begin{tikzpicture}
@@ -372,7 +372,7 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ymin=2.5e-2,
     ymax=6.5e-2
     ]
-        \addplot [only marks,color=tab_red,mark=diamond*] table [col sep=tab,y=C_abs] {plots/absolute_experimental/cb_agg_coated.txt};
+        \addplot [only marks,color=tab_red,mark=diamond*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_abs,y error=C_abs_err_res] {plots/absolute_experimental/cb_agg_coated.txt};
         \addlegendentry{Experimental}
         \addplot [no markers,color=tab_red] table [col sep=tab,y=C_abs_mie] {plots/absolute_mie/cb_agg.txt};
         \addlegendentry{Mie(+)}
@@ -381,7 +381,7 @@ Absorption and scattering cross sections that were used to calculate enhancement
         \addplot [ultra thick,dotted,no markers,color=tab_red] table [col sep=tab,y=C_abs_rdg] {plots/absolute_mie/cb_agg.txt};
         \addlegendentry{RDG/Mie}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(d)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{agg}}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{agg}, D\textsubscript{ve} 170 nm}};
     \end{axis}
     \end{tikzpicture}}
     \caption{Measured and calculated absorption cross sections for (a) compact soot, (b) nigrosin, (c) compact CB, and (d) agglomerated CB.
@@ -401,14 +401,14 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ymin=0,
     ymax=6.5e-2
     ]
-        \addplot [only marks,color=tab_blue,mark=otimes*] table [col sep=tab,y=C_sca] {plots/absolute_experimental/soot_coated.txt};
+        \addplot [only marks,color=tab_blue,mark=otimes*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_sca,y error=C_sca_err_res] {plots/absolute_experimental/soot_coated.txt};
         \addlegendentry{Experimental}
         \addplot [no markers,color=tab_blue] table [col sep=tab,y=C_sca_mie] {plots/absolute_mie/soot.txt};
         \addlegendentry{Mie(+)}
         \addplot [ultra thick,dashed,no markers,color=tab_blue] table [col sep=tab,y=C_sca_corr] {plots/absolute_mie/soot.txt};
         \addlegendentry{Mie(++)}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{BC}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Soot, D\textsubscript{ve} 137 nm}};
     \end{axis}
     \end{tikzpicture}
     \begin{tikzpicture}
@@ -420,14 +420,14 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ymin=0,
     ymax=6.5e-2
     ]
-        \addplot [only marks,color=tab_orange,mark=square*] table [col sep=tab,y=C_sca] {plots/absolute_experimental/nigrosin.txt};
+        \addplot [only marks,color=tab_orange,mark=square*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_sca,y error=C_sca_err_res] {plots/absolute_experimental/nigrosin.txt};
         \addlegendentry{Experimental}
         \addplot [no markers,color=tab_orange] table [col sep=tab,y=C_sca_mie] {plots/absolute_mie/nigrosin.txt};
         \addlegendentry{Mie(+)}
         \addplot [ultra thick,dashed,no markers,color=tab_orange] table [col sep=tab,y=C_sca_corr] {plots/absolute_mie/nigrosin.txt};
         \addlegendentry{Mie(++)}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(b)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Nigrosin}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Nigrosin, D\textsubscript{ve} 150 nm}};
     \end{axis}
     \end{tikzpicture}}
     \resizebox{\columnwidth}{!}{\begin{tikzpicture}
@@ -436,17 +436,17 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ylabel={$C_\mathrm{sca},\ \mathrm{\mu m}^2$},
     legend pos=north west,
     legend cell align={left},
-    ymin=0,
+    ymin=-0.2e-2,
     ymax=3.5e-2
     ]
-        \addplot [only marks,color=tab_grey,mark=triangle*] table [col sep=tab,y=C_sca] {plots/absolute_experimental/cb_cmp_coated.txt};
+        \addplot [only marks,color=tab_grey,mark=triangle*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_sca,y error=C_sca_err_res] {plots/absolute_experimental/cb_cmp_coated.txt};
         \addlegendentry{Experimental}
         \addplot [no markers,color=tab_grey] table [col sep=tab,y=C_sca_mie] {plots/absolute_mie/cb_cmp.txt};
         \addlegendentry{Mie(+)}
         \addplot [ultra thick,dashed,no markers,color=tab_grey] table [col sep=tab,y=C_sca_corr] {plots/absolute_mie/cb_cmp.txt};
         \addlegendentry{Mie(++)}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(c)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{cmp}}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{cmp}, D\textsubscript{ve} 111 nm}};
     \end{axis}
     \end{tikzpicture}
     \begin{tikzpicture}
@@ -458,14 +458,14 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ymin=0,
     ymax=6.5e-2
     ]
-        \addplot [only marks,color=tab_red,mark=diamond*] table [col sep=tab,y=C_sca] {plots/absolute_experimental/cb_agg_coated.txt};
+        \addplot [only marks,color=tab_red,mark=diamond*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_sca,y error=C_sca_err_res] {plots/absolute_experimental/cb_agg_coated.txt};
         \addlegendentry{Experimental}
         \addplot [no markers,color=tab_red] table [col sep=tab,y=C_sca_mie] {plots/absolute_mie/cb_agg.txt};
         \addlegendentry{Mie(+)}
         \addplot [ultra thick,dashed,no markers,color=tab_red] table [col sep=tab,y=C_sca_corr] {plots/absolute_mie/cb_agg.txt};
         \addlegendentry{Mie(++)}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(d)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{agg}}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{agg}, D\textsubscript{ve} 170 nm}};
     \end{axis}
     \end{tikzpicture}}
     \caption{Measured and calculated scattering cross sections for (a) compact soot, (b) nigrosin, (c) compact CB, and (d) agglomerated CB. Measured (markers), calculated with core-shell Mie theory (solid line), and calculated with Mie by accounting for doubly charged particles (dashed line). For cases (a) and (d), the dashed and solid line overlap due to a negligible fraction of double charged particles. Volume equivalent and mobility diameters for each aerosol type are shown in Table \ref{tab:densities}.}
@@ -498,11 +498,11 @@ DDA was used to calculate scattering enhancements for coated-denuded soot. Since
 In this section, we derive an equation that relates the coating thicknesses of singly and doubly charged particles. For a spherical particle, the rate of condensation is inversely proportional to particle radius \citep{RN2},
 
 \begin{equation}
-    \frac{dr}{dt}=\left(C-C_{s,Kelvin}\right)C_{FS}D_iM\frac{1}{\rho r}
+    \frac{dr}{dt}=\left(x-x_{s,Kelvin}\right)C_{FS}D_iM\frac{1}{\rho r}
     \label{s:eq:condensation}
 \end{equation}
 
-\noindent where $C$ is the vapor concentration, $C_{s,Kelvin}$ is the Kelvin-corrected saturated vapor concentration, $C_{FS}$ is the transition regime correction factor, $D_i$ is the gas diffusivity of the coating material, $M$ is the molar mass of the coating material, $\rho$ is the material mass density of the coating material, and $r$ the is particle radius. The continuum regime equation with a transition correction factor was selected because the size of particles used in this study is greater than the mean free path of air. If we assume that supersaturation produced by the coating chamber is high enough that Kelvin effect can be neglected and $C_{FS}$ does not change significantly between singly and doubly charged particles (mobility diameter differs by a factor of approximately 1.5), equation \ref{s:eq:condensation} can be written as,
+\noindent where $x$ is the vapor concentration, $x_{s,Kelvin}$ is the Kelvin-corrected saturated vapor concentration, $C_{FS}$ is the transition regime correction factor, $D_i$ is the gas diffusivity of the coating material, $M$ is the molar mass of the coating material, $\rho$ is the material mass density of the coating material, and $r$ the is particle radius. The continuum regime equation with a transition correction factor was selected because the size of particles used in this study is greater than the mean free path of air. If we assume that supersaturation produced by the coating chamber is high enough that Kelvin effect can be neglected and $C_{FS}$ does not change significantly between singly and doubly charged particles (mobility diameter differs by a factor of approximately 1.5), equation \ref{s:eq:condensation} can be written as,
 
 \begin{equation}
     \frac{dr}{dt}=A\frac{1}{r}
@@ -524,7 +524,7 @@ In this section, we derive an equation that relates the coating thicknesses of s
 \begin{figure}[htp]
 \centering
 \includegraphics[scale=0.7]{images/fig_supp_thickness_formula.eps}
-\caption{Volume equivalent coating thickness of singly charged compact CB particles (measured) and doubly charged compact CB particles (calculated using equation \ref{s:eq:thickness}) versus Gfm of singly charged particles.}
+\caption{Volume equivalent coating thickness (measured) of singly charged compact CB particles, $D_{ve}=111\ \rm nm$, and (calculated using equation \ref{s:eq:thickness}) doubly charged compact CB particles, $D_{ve}=168\ \rm nm$, versus Gfm of singly charged particles.}
 \label{s:fig:thickness}
 \end{figure}
 
@@ -544,7 +544,7 @@ To account for the slower diameter growth of doubly charged particles in optical
 
 \section{Effect of different refractive indices of soot and its surrogates}
 
-The choice of refractive index for a material may have a significant effect on the outcome of optical calculations. Similarly, the difference in complex refractive indices between soot and its surrogates can contribute to different optical responses during particle processing. Being the same material chemically, CB and mature soot are expected to have similar refractive indices. However, the imaginary part of the complex refractive index of nigrosin is significantly lower than that of soot (Table \ref{tab:refindices} in main text). To evaluate the impact of this difference, we calculated $E_{abs}$, $E_{sca}$, and $SSA$ of spherical 150 nm particles made of soot ($1.7+0.6i$) and nigrosin ($1.7+0.3i$) that were coated by DOS ($1.4+0.0i$) (Table \ref{tab:ssa}). Remarkably, the enhancement in light absorption is similar between soot and nigrosin (within $4\%$ for the 40 nm coating thickness), but enhancement in light scattering and SSA are significantly different, by $25\%$ and $32\%$, respectively. Thus, using nigrosin as a surrogate of soot may lead to a significant underestimation of light scattering by coated combustion aerosols.  
+The choice of refractive index for a material may have a significant effect on the outcome of optical calculations. Similarly, the difference in complex refractive indices between soot and its surrogates can contribute to different optical responses during particle processing. Being the same material chemically, CB and mature soot are expected to have similar refractive indices. However, the imaginary part of the complex refractive index of nigrosin is significantly lower than that of soot (Table \ref{tab:refindices} in main text). To evaluate the impact of this difference, we calculated $E_{abs}$, $E_{sca}$, and $SSA$ at 525 nm wavelength of spherical 150 nm particles made of soot ($1.7+0.6i$) and nigrosin ($1.7+0.3i$) that were coated by DOS ($1.4+0.0i$) (Table \ref{tab:ssa}). Remarkably, the enhancement in light absorption is similar between soot and nigrosin (within $4\%$ for the 40 nm coating thickness), but enhancement in light scattering and SSA are significantly different, by $25\%$ and $32\%$, respectively. Thus, using nigrosin as a surrogate of soot may lead to a significant underestimation of light scattering by coated combustion aerosols.
 
 
 %\textcolor{blue}{For aerosols, refractive indices are often retrieved from experimental optical measurements. To carry out a reverse calculation, an optical model needs to be used. \citet{RN67} compare complex refractive indices of soot retrieved by two different optical models: Mie and RDG. At 532 nm wavelength, they found the refractive index of soot to be $1.96+1.01i$ (Mie) and $1.80+1.43i$ (RDG).}

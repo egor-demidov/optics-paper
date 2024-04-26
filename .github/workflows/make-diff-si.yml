@@ -1,0 +1,26 @@
+name: Generate a pdf highlighting differences from the base commit
+
+run-name: SI Diff build pipeline triggered by ${{ github.actor }}
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  Compile-Linux-GNU:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Generate a diff file (SI)
+        uses: egor-demidov/create-latexdiff@v1.2
+        with:
+          main-file: 'supplemental.tex'
+      - name: Archive compiled artifact (SI)
+        uses: actions/upload-artifact@v3
+        with:
+          name: diff-file-si
+          path: |
+            diff.pdf
