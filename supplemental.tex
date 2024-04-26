@@ -79,13 +79,13 @@
 The DMA operates by classifying charged particles based on their mobility in an electric field. A specific applied voltage corresponds to a particular electrical mobility diameter of particles, $D$, transmitted by the instrument, and the relationship is defined by equation \ref{s:eq:dma},
 
 \begin{equation}
-    \frac{D}{C}=\frac{2neVL}{3\eta q_{sh}\ln{\frac{r_2}{r_1}}}
+    \frac{D}{C_C}=\frac{2n_eeVL}{3\eta q_{sh}\ln{\frac{r_2}{r_1}}}
     \label{s:eq:dma}
 \end{equation}
 
-\noindent where $C$ is the Cunningham slip correction factor, $n$ is the number of elementary charges, $V$ is the set voltage between electrodes, $L$, $r_1$, $r_2$ are parameters related to the geometry of the instrument, $\eta$ is the gas kinematic viscosity, and $q_{sh}$ is the sheath flow through the DMA. $C$ is a function of particle diameter \citep{davies1945definitive}, where $\lambda$ is the mean free path of gas, and significantly deviates from unity for our particle size range,
+\noindent where $C_C$ is the Cunningham slip correction factor, $n_e$ is the number of elementary charges, $V$ is the set voltage between electrodes, $L$, $r_1$, $r_2$ are parameters related to the geometry of the instrument, $\eta$ is the gas kinematic viscosity, and $q_{sh}$ is the sheath flow through the DMA. $C_C$ is a function of particle diameter \citep{davies1945definitive}, where $\ell$ is the mean free path of gas, and significantly deviates from unity for our particle size range,
 \begin{equation}
-    C=1+2\frac{\lambda}{D}\left(1.254+0.4e^{-1.1\frac{D}{2\lambda}}\right)
+    C_C=1+2\frac{\ell}{D}\left(1.254+0.4e^{-1.1\frac{D}{2\ell}}\right)
     \label{s:eq:cunningham}
 \end{equation}
 The APM operates by applying an electric field to particles passing in a flow of gas through a gap between revolving cylindrical electrodes. Mass is only proportional to particle charge at a constant voltage and revolution speed (Equation \ref{s:eq:apm}),
@@ -93,7 +93,7 @@ The APM operates by applying an electric field to particles passing in a flow of
     mr\omega^2=q\frac{V}{r\ln{\frac{r_2}{r_1}}}
     \label{s:eq:apm}
 \end{equation}
-where $q$ is the total charge on a particle, $r$, $r_1$, $r_2$ are the geometric parameters of the instrument, and $V$ is the set voltage. Figure \ref{s:fig:smps} shows size distributions of all aerosols considered in this study as normalized number concentration versus electrical mobility diameter. The size distribution was obtained with a Scanning Mobility Particle Sizer (SMPS) system, consisting of a bipolar charger, a DMA, and a CPC. Figure \ref{s:fig:apm-bare-nigrosin} shows mass distributions of nigrosin of different electrical mobility diameters.
+where $q$ is the total charge on a particle, $r$, $r_1$, $r_2$ are the geometric parameters of the instrument, and $V$ is the set voltage. Figure \ref{s:fig:smps} shows size distributions of all aerosols considered in this study as normalized number concentration versus electrical mobility diameter. The size distribution was obtained with a Scanning Mobility Particle Sizer (SMPS) system, consisting of an electrostatic classifier and a CPC. Figure \ref{s:fig:apm-bare-nigrosin} shows mass distributions of nigrosin of different electrical mobility diameters.
 
 \begin{figure}[htp]
 \centering
@@ -111,10 +111,10 @@ where $q$ is the total charge on a particle, $r$, $r_1$, $r_2$ are the geometric
 
 \section{Multiple charging}
 \subsection{Charging probabilities}
-An aerosol particle carrying two charges will not have twice the electrical mobility diameter of a singly charged particle because the diameter is proportional not only to the number of elementary charges $n$, but also to the Cunningham slip correction factor, $C$.
+An aerosol particle carrying two charges will not have twice the electrical mobility diameter of a singly charged particle because the diameter is proportional not only to the number of elementary charges $n_e$, but also to the Cunningham slip correction factor, $C_C$.
 
 \begin{equation}
-    \frac{D_1}{D_2}=\frac{n_1C_1}{n_2C_2}
+    \frac{D_1}{D_2}=\frac{n_{e,1}C_{C,1}}{n_{e,2}C_{C,2}}
 \end{equation}
 
 \noindent There are two ways to determine the number fraction of particles carrying different charges. One way is to calculate it from the size distribution (a.k.a. a DMA scan) and charging probability of each particle size \citep{RN10}. Another approach is to pass size-classified aerosol through another charger, where most of the multiply charged particles will become singly charged. When taking a size distribution with the second DMA, the true electrical mobility diameter of those particles will be revealed and the doubly charged particles will be separated from the singly charged particles. By calculating the areas under each particle mode, we can estimate the fractions of singly and doubly charged particles in the aerosol.
