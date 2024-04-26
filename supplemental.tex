@@ -544,33 +544,33 @@ To account for the slower diameter growth of doubly charged particles in optical
 
 % Processed images go here
 
-\section{Effect of different refractive indices of soot and its surrogates}
-
-The choice of refractive index for a material may have a significant effect on the outcome of optical calculations. Similarly, the difference in complex refractive indices between soot and its surrogates can contribute to different optical responses during particle processing. Being the same material chemically, CB and mature soot are expected to have similar refractive indices. However, the imaginary part of the complex refractive index of nigrosin is significantly lower than that of soot (Table \ref{tab:refindices} in main text). To evaluate the impact of this difference, we calculated $E_{abs}$, $E_{sca}$, and $SSA$ at 525 nm wavelength of spherical 150 nm particles made of soot ($1.7+0.6i$) and nigrosin ($1.7+0.3i$) that were coated by DOS ($1.4+0.0i$) (Table \ref{tab:ssa}). Remarkably, the enhancement in light absorption is similar between soot and nigrosin (within $4\%$ for the 40 nm coating thickness), but enhancement in light scattering and SSA are significantly different, by $25\%$ and $32\%$, respectively. Thus, using nigrosin as a surrogate of soot may lead to a significant underestimation of light scattering by coated combustion aerosols.
-
+% \section{Effect of different refractive indices of soot and its surrogates}
+%
+% The choice of refractive index for a material may have a significant effect on the outcome of optical calculations. Similarly, the difference in complex refractive indices between soot and its surrogates can contribute to different optical responses during particle processing. Being the same material chemically, CB and mature soot are expected to have similar refractive indices. However, the imaginary part of the complex refractive index of nigrosin is significantly lower than that of soot (Table \ref{tab:refindices} in main text). To evaluate the impact of this difference, we calculated $E_{abs}$, $E_{sca}$, and $SSA$ at 525 nm wavelength of spherical 150 nm particles made of soot ($1.7+0.6i$) and nigrosin ($1.7+0.3i$) that were coated by DOS ($1.4+0.0i$) (Table \ref{tab:ssa}). Remarkably, the enhancement in light absorption is similar between soot and nigrosin (within $4\%$ for the 40 nm coating thickness), but enhancement in light scattering and SSA are significantly different, by $25\%$ and $32\%$, respectively. Thus, using nigrosin as a surrogate of soot may lead to a significant underestimation of light scattering by coated combustion aerosols.
+%
 
 %\textcolor{blue}{For aerosols, refractive indices are often retrieved from experimental optical measurements. To carry out a reverse calculation, an optical model needs to be used. \citet{RN67} compare complex refractive indices of soot retrieved by two different optical models: Mie and RDG. At 532 nm wavelength, they found the refractive index of soot to be $1.96+1.01i$ (Mie) and $1.80+1.43i$ (RDG).}
 
 %\textcolor{red}{Note: Also consider adding a brief discussion on model dependence of the complex refractive index of soot. First, use two different indices of soot (e.g., RDG and Mie based from Forestieri) to predict enhancements and SSA, similar as you did in table 5 for soot vs nigrosin. If the difference is significant, e.g., 10 percent or more, then certainly this is worth discussing in a few sentences.}\textcolor{blue}{Added above, but this may raise some questions. The RIs provided by \citet{RN67} are very different from what we used in our calculations}
 
 % SSA for different RIs
-\begin{table}[!ht]
-    \centering
-    \caption{SSA for 150 nm particles with $1.7+0.6i$ (Soot \& CB) and $1.7+0.3i$ (nigrosin) refractive indices coated with DOS calculated using Mie}
-    \begin{tabular}{c c c c c c c}
-        \hline
-        & \multicolumn{2}{c}{SSA} & \multicolumn{2}{c}{$E_\mathrm{abs}$} & \multicolumn{2}{c}{$E_\mathrm{sca}$} \\
-        $\Delta r_{\mathrm{ve}},\ \mathrm{nm}$ & $1.7+0.6i$ & $1.7+0.3i$ & $1.7+0.6i$ & $1.7+0.3i$ & $1.7+0.6i$ & $1.7+0.3i$ \\
-        \hline
-        0 & 0.248 & 0.306 & 1.00 & 1.00 & 1.00 & 1.00\\
-        10 & 0.295 & 0.383 & 1.11 & 1.12 & 1.40 & 1.57\\
-        20 & 0.345 & 0.460 & 1.20 & 1.22 & 1.92 & 2.37\\
-        40 & 0.450 & 0.597 & 1.37 & 1.42 & 3.40 & 4.79\\
-        80 & 0.672 & 0.800 & 1.71 & 1.79 & 10.60 & 16.25\\
-        \hline
-    \end{tabular}
-    \label{tab:ssa}
-\end{table}
+% \begin{table}[!ht]
+%     \centering
+%     \caption{SSA for 150 nm particles with $1.7+0.6i$ (Soot \& CB) and $1.7+0.3i$ (nigrosin) refractive indices coated with DOS calculated using Mie}
+%     \begin{tabular}{c c c c c c c}
+%         \hline
+%         & \multicolumn{2}{c}{SSA} & \multicolumn{2}{c}{$E_\mathrm{abs}$} & \multicolumn{2}{c}{$E_\mathrm{sca}$} \\
+%         $\Delta r_{\mathrm{ve}},\ \mathrm{nm}$ & $1.7+0.6i$ & $1.7+0.3i$ & $1.7+0.6i$ & $1.7+0.3i$ & $1.7+0.6i$ & $1.7+0.3i$ \\
+%         \hline
+%         0 & 0.248 & 0.306 & 1.00 & 1.00 & 1.00 & 1.00\\
+%         10 & 0.295 & 0.383 & 1.11 & 1.12 & 1.40 & 1.57\\
+%         20 & 0.345 & 0.460 & 1.20 & 1.22 & 1.92 & 2.37\\
+%         40 & 0.450 & 0.597 & 1.37 & 1.42 & 3.40 & 4.79\\
+%         80 & 0.672 & 0.800 & 1.71 & 1.79 & 10.60 & 16.25\\
+%         \hline
+%     \end{tabular}
+%     \label{tab:ssa}
+% \end{table}
 
 
 %Necking references:
@@ -579,6 +579,25 @@ The choice of refractive index for a material may have a significant effect on t
 %    \item \citet{RN74} - Different neck representations
 %\end{itemize}
 
+\section{Mass mobility data used in Figure \ref{fig:mass_mobility}}
+
+\label{s:sec:tabulated-mobility}
+
+\begin{table}[!htp]
+\centering
+\begin{tabular}{c c c c c c c}
+    & Soot & CB\textsubscript{cmp} & CB\textsubscript{agg} & Nigrosin & & PSL\\
+    $D,\rm\ nm$ & $m,\rm\ fg$ & $m,\rm\ fg$ & $m,\rm\ fg$ & $m,\rm\ fg$ & $D,\rm\ nm$ & $m,\rm\ fg$\\
+    150 & x & x & 1.39 & 2.54 & 152 & x\\
+    180 & x & x & 2.27 & 4.34 & 240 & x\\
+    210 & x & x & 3.43 & 6.84 & 345 & x\\
+    240 & x & x & 4.91 & 10.1\\
+    270 & x & x & 6.73 & 14.4\\
+    300 & x & x & 8.93 & 19.6\\
+    330 & x & x & 11.5 & 25.9\\
+    350 & x & x & 13.5 & 30.9\\
+\end{tabular}
+\end{table}
 
 \bibliographystyle{elsarticle-harv} 
 \bibliography{cas-refs}
