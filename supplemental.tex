@@ -279,7 +279,7 @@ To quantify the number fraction of doubly charged particles, each mode on the re
 % \label{s:fig:mass_mobility}
 % \end{figure}
 
-Relationship between the mass growth factor ($\rm Gfm$) and volume-equivalent coating thickness ($\Delta r_{ve}$) is presented in Figure \ref{s:fig:drve}. The conversion can be performed with Equation \ref{eq:drve} from main text.
+Relationship between the mass growth factor ($GF_m$) and volume-equivalent coating thickness ($\Delta r_{ve}$) is presented in Figure \ref{s:fig:drve}. The conversion can be performed with Equation \ref{eq:drve} from main text.
 
 \begin{figure}[htp]
 \centering
@@ -526,7 +526,7 @@ In this section, we derive an equation that relates the coating thicknesses of s
 \begin{figure}[htp]
 \centering
 \includegraphics[scale=0.7]{images/fig_supp_thickness_formula.eps}
-\caption{Volume equivalent coating thickness (measured) of singly charged compact CB particles, $D_{ve}=111\ \rm nm$, and (calculated using equation \ref{s:eq:thickness}) doubly charged compact CB particles, $D_{ve}=168\ \rm nm$, versus Gfm of singly charged particles.}
+\caption{Volume equivalent coating thickness (measured) of singly charged compact CB particles, $D_{ve}=111\ \rm nm$, and (calculated using equation \ref{s:eq:thickness}) doubly charged compact CB particles, $D_{ve}=168\ \rm nm$, versus $GF_m$ of singly charged particles.}
 \label{s:fig:thickness}
 \end{figure}
 
@@ -581,22 +581,25 @@ To account for the slower diameter growth of doubly charged particles in optical
 
 \section{Mass mobility data used in Figure \ref{fig:mass_mobility}}
 
-\label{s:sec:tabulated-mobility}
-
 \begin{table}[!htp]
 \centering
+\caption{Data used to generate Figure \ref{fig:mass_mobility} presented in a tabular format}
 \begin{tabular}{c c c c c c c}
-    & Soot & CB\textsubscript{cmp} & CB\textsubscript{agg} & Nigrosin & & PSL\\
+\hline
+    & \textbf{Soot} & \textbf{CB\textsubscript{cmp}} & \textbf{CB\textsubscript{agg}} & \textbf{Nigrosin} & & \textbf{PSL}\\
     $D,\rm\ nm$ & $m,\rm\ fg$ & $m,\rm\ fg$ & $m,\rm\ fg$ & $m,\rm\ fg$ & $D,\rm\ nm$ & $m,\rm\ fg$\\
-    150 & x & x & 1.39 & 2.54 & 152 & x\\
-    180 & x & x & 2.27 & 4.34 & 240 & x\\
-    210 & x & x & 3.43 & 6.84 & 345 & x\\
-    240 & x & x & 4.91 & 10.1\\
-    270 & x & x & 6.73 & 14.4\\
-    300 & x & x & 8.93 & 19.6\\
-    330 & x & x & 11.5 & 25.9\\
-    350 & x & x & 13.5 & 30.9\\
+\hline
+    150 & 0.752 & 1.28 & 1.39 & 2.54 & 152 & 1.94\\
+    180 & 1.19 & 2.04 & 2.27 & 4.34 & 240 & 7.59\\
+    210 & 1.65 & 3.14 & 3.43 & 6.84 & 345 & 22.8\\
+    240 & 2.34 & 4.67 & 4.91 & 10.1\\
+    270 & 3.16 & 6.73 & 6.73 & 14.4\\
+    300 & 4.18 & 9.12 & 8.93 & 19.6\\
+    330 & 4.77 & 12.0 & 11.5 & 25.9\\
+    350 & 5.44 & 14.3 & 13.5 & 30.9\\
+\hline
 \end{tabular}
+\label{s:tab:tabulated-mobility}
 \end{table}
 
 \bibliographystyle{elsarticle-harv} 
