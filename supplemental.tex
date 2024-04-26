@@ -128,13 +128,13 @@ Figure \ref{s:fig:probability} shows the charging probabilities for different nu
 \begin{figure}[htp]
 \centering
 \includegraphics[scale=0.7]{images/fig_supp_probability.eps}
-\caption{Charging probability of aerosol versus mobility diameter}
+\caption{Charging probability of aerosol versus mobility diameter, figure produced using the data of \citet{RN10}}
 \label{s:fig:probability}
 \end{figure}
 
 \subsection{Quantifying multiply charged particles via recharging}
 
-Figure \ref{s:fig:tdma} shows a recharged tandem DMA (TDMA) scan of 150 nm nigrosin, where size-classified aerosol is recharged with a second bipolar charger and a size distribution scan is performed by the second DMA. Recharging causes the majority of doubly and triply charged particles to become singly charged and reveals those particles as separate peaks (indicated by $2\rightarrow 1$ and $3\rightarrow 1$ in the figure). Recharging also causes some particles that were initially singly charged to attain double and triple charges (peak indicated by $1\rightarrow 2$ and $1\rightarrow 3$ in the figure). Particles that retain single charges after recharging are indicated with $1\rightarrow 1$. The number of triply charged particles is typically small. 
+Figure \ref{s:fig:tdma} shows a recharged tandem DMA (TDMA) scan of 150 nm nigrosin, where size-classified aerosol is recharged with a second bipolar charger and a size distribution scan is performed by the second DMA. Recharging causes the majority of doubly and triply charged particles to become singly charged and reveals those particles as separate peaks (indicated by $2\rightarrow 1$ and $3\rightarrow 1$ in the figure). Recharging also causes some particles that were initially singly charged to attain double and triple charges (peak indicated by $1\rightarrow 2$ and $1\rightarrow 3$ in the figure). Particles that retain single charges after recharging are indicated with $q\rightarrow q$. The number of triply charged particles is typically small.
 
 \begin{figure}[htp]
 \centering
@@ -218,21 +218,21 @@ To quantify the number fraction of doubly charged particles, each mode on the re
 			\end{axis}
 		\end{tikzpicture}
 	}
-	\caption{TDMA scans of recharged aerosols: (a) black carbon, (b) nigrosin, $D_0=150\ \mathrm{nm}$, (c) compact CB, and (d) agglomerated CB}
+	\caption{TDMA scans of recharged aerosols: (a) soot, (b) nigrosin, $D_0=150\ \mathrm{nm}$, (c) compact CB, and (d) agglomerated CB}
  \label{s:fig:recharged_all}
 \end{figure}
 
 \subsection{Effect of multiple charging on particle mass measurements}
 \label{s:sec:multiple_charging_and_mass}
 
-The relationship in Equation \ref{s:eq:mult_charging} is used to determine “apparent mass” of multiply charged particles that is the mass that will be measured by the APM. The apparent mass is lower than the true mass by a factor of $n_1$/$n_2$.
+The relationship in Equation \ref{s:eq:mult_charging} is used to determine the effective mass of multiply charged particles that is the mass that will be measured by the APM. The apparent mass is lower than the true mass by a factor of $n_1$/$n_2$.
 
 \begin{equation}
     \label{s:eq:mult_charging}
     \frac{m_2}{m_1}=\frac{n_1}{n_2}\left(\frac{D_2}{D_1}\right)^\varepsilon
 \end{equation}
 
-\noindent In equation \ref{s:eq:mult_charging}, $m_1$ and $m_2$ are the apparent masses of particles carrying $n_1$ and $n_2$ elementary charges, $D_1$ and $D_2$ are the electrical mobility diameters of the particles, and $\varepsilon$ is the mass-mobility exponent. Note that $\varepsilon = 3$ for spherical particles and $\varepsilon \in [1,3)$ for non-spherical particles, which accounts for the variation of effective density of such particles with size.
+\noindent In equation \ref{s:eq:mult_charging}, $m_1$ and $m_2$ are the apparent masses of particles carrying $n_1$ and $n_2$ elementary charges, $D_1$ and $D_2$ are the electrical mobility diameters of the particles, and $\varepsilon$ is the mass-mobility exponent. Note that $\varepsilon = 3$ for spherical particles and $\varepsilon > 1$ for non-spherical particles, which accounts for the variation of effective density of such particles with size.
 
 \begin{table}[ht]
 \caption{Electrical mobility diameters and masses of singly and doubly charged particles}
@@ -240,7 +240,7 @@ The relationship in Equation \ref{s:eq:mult_charging} is used to determine “ap
 \begin{center}
 \begin{tabular}{ c c c c } 
  \hline
- $D_1$, nm & $D_2$, nm & $D_2/D_1$ & $m_2/m_1$\tablefootnote{$m_2/m_1=0.5\times (D_2/D_1)^3$; the multiplier $0.5$ accounts for the presence of two charges on particles with mass $m_2$} \\
+ $D_1$, nm & $D_2$, nm & $D_2/D_1$ & $m_2/m_1$\tablefootnote{$m_2/m_1=0.5\times (D_2/D_1)^3$; the multiplier $0.5$ accounts for the presence of two charges on particles with mass $m_2$. These mass ratios assume an $\varepsilon$ of 3 and are not applicable to all types of particles} \\
  \hline
 150 & 236 & 1.57 & 1.95\\
 240 & 397 & 1.66 & 2.27\\
@@ -250,7 +250,7 @@ The relationship in Equation \ref{s:eq:mult_charging} is used to determine “ap
 \end{center}
 \end{table}
 
-\noindent As seen in Table \ref{s:tab:double_charges}, non-fractal doubly charged particles of the same electrical mobility diameter as singly charged particles have their apparent mass approximately twice the mass of singly charged particles on an APM scan. Hence, in some cases these doubly charged particles can contribute to the right shoulder of the main mass distribution, biasing the mean mass high. For each $D_1$, the fraction of doubly charged particles can be estimated based on total aerosol size distribution and charging probability \citep{RN10}. The fact that PSL produced the mass-mobility exponent of 3.00 supports this hypothesis, since for PSL spheres, which are truly monodisperse in suspension, doubly charged particles are discarded by DMA during mobility classification. 
+\noindent As seen in Table \ref{s:tab:double_charges}, spherical doubly charged particles of the same electrical mobility diameter as singly charged particles have their apparent mass approximately twice the mass of singly charged particles on an APM scan. Hence, in some cases these doubly charged particles can contribute to the right shoulder of the main mass distribution, biasing the mean mass high. For each $D_1$, the fraction of doubly charged particles can be estimated based on total aerosol size distribution and charging probability \citep{RN10}. The fact that PSL produced the mass-mobility exponent of 3.00 supports this hypothesis, since for PSL spheres, which are truly monodisperse in suspension, doubly charged particles are discarded by DMA during mobility classification.
 % The impact of multiple charging on the mass-mobility exponent was estimated from size distribution of nigrosin and charging probabilities and results are available  in supplemental information (Table S, Figure S, Text S?).
 
 % \begin{figure}[htp]
@@ -495,14 +495,14 @@ DDA was used to calculate scattering enhancements for coated-denuded soot. Since
 \section{Coating thickness of multiply charged particles}
 \label{s:sec:drve_multiply_charged}
 
-In this section, we derive an equation that relates the rates of condensation on singly and doubly charged particles. For a spherical particle, the rate of condensation is inversely proportional to particle radius \citep{RN2},
+In this section, we derive an equation that relates the coating thicknesses of singly and doubly charged particles. For a spherical particle, the rate of condensation is inversely proportional to particle radius \citep{RN2},
 
 \begin{equation}
     \frac{dr}{dt}=\left(C-C_{s,Kelvin}\right)C_{FS}D_iM\frac{1}{\rho r}
     \label{s:eq:condensation}
 \end{equation}
 
-\noindent where $C$ is the vapor concentration, $C_{s,Kelvin}$ is the Kelvin-corrected saturated vapor concentration, $C_{FS}$ is the transition regime correction factor, $D_i$ is the gas diffusivity of the coating material, $M$ is the molar mass of the coating material, $\rho$ is the density of the coating material, and $r$ the is particle radius. The continuum regime equation with a transition correction factor was selected because the size of particles used in this study is greater than the mean free path of air. If we assume that supersaturation produced by the coating chamber is high enough that Kelvin effect can be neglected and $C_{FS}$ does not change significantly between singly and doubly charged particles (mobility diameter differs by a factor of approximately 1.5), equation \ref{s:eq:condensation} can be written as,
+\noindent where $C$ is the vapor concentration, $C_{s,Kelvin}$ is the Kelvin-corrected saturated vapor concentration, $C_{FS}$ is the transition regime correction factor, $D_i$ is the gas diffusivity of the coating material, $M$ is the molar mass of the coating material, $\rho$ is the material mass density of the coating material, and $r$ the is particle radius. The continuum regime equation with a transition correction factor was selected because the size of particles used in this study is greater than the mean free path of air. If we assume that supersaturation produced by the coating chamber is high enough that Kelvin effect can be neglected and $C_{FS}$ does not change significantly between singly and doubly charged particles (mobility diameter differs by a factor of approximately 1.5), equation \ref{s:eq:condensation} can be written as,
 
 \begin{equation}
     \frac{dr}{dt}=A\frac{1}{r}
