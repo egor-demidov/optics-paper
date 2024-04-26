@@ -6,7 +6,7 @@
 
 Prior to discussing the results, we need to understand the uncertainties associated with each type of measurement. We measure the change in optical properties of aerosols in response to coating and compare experimental results with calculations. Both depend on optical, mass, and size measurements and their respective errors. Also, since the experiments described in this study take hours, variability in bare aerosol throughout the day can introduce additional uncertainty. In this section, we discuss uncertainty contributions from various factors and what was done to minimize them.
 
-A methodological uncertainty is introduced by a limitation of CAPS PM\textsubscript{SSA}: it underestimates scattering of particles that exhibit a significant fraction of forward and backward scattering. In the Mie scattering regime, scattering anisotropy increases with particle size. Particles under 250 nm in diameter do not exhibit a large amount of forward and backward scattering, thus making the truncation error of CAPS PMSSA negligible. This effect sets an upper bound on the size of particles used in experiments. On the other hand, the manufacturer reports that CAPS PM\textsubscript{SSA} has a resolution of $0.1\rm\ Mm^{-1}$ and precision of less than $3\rm\ Mm^{-1}$, according to the instrument manual. The magnitude of optical coefficients increases approximately quadratically with particle size. Hence, a larger particle size is preferable to maximize the magnitude of measured optical coefficients relative to the reported resolution and precision. Based on these considerations, we restricted our optical measurements to particles between 150 nm and 240 nm mobility diameter, which should minimize the methodological uncertainty. Statistical uncertainties are discussed further.
+A methodological uncertainty is introduced by a limitation of CAPS PM\textsubscript{SSA}: it underestimates scattering of particles that exhibit a significant fraction of forward and backward scattering. In the Mie scattering regime, scattering anisotropy increases with particle size. Particles under 250 nm in diameter do not exhibit a large amount of forward and backward scattering, thus making the truncation error of CAPS PM\textsubscript{SSA} negligible. This effect sets an upper bound on the size of particles used in experiments. On the other hand, the manufacturer reports that CAPS PM\textsubscript{SSA} has a resolution of $0.1\rm\ Mm^{-1}$ and precision of less than $3\rm\ Mm^{-1}$, according to the instrument manual. The magnitude of optical coefficients increases approximately quadratically with particle size. Hence, a larger particle size is preferable to maximize the magnitude of measured optical coefficients relative to the reported resolution and precision. Based on these considerations, we restricted our optical measurements to particles between 150 nm and 240 nm mobility diameter, which should minimize the methodological uncertainty. Statistical uncertainties are discussed further.
 
 To verify the reproducibility of measurements made over several days, optical measurements of 150 nm bare nigrosin were performed on thee days. Absorption cross sections varied by $<1\%$ from day to day and scattering and scattering cross sections had a standard deviation of $<3\%$. Consistency of nigrosin measurements over several days indicates that any significant variance observed in fresh soot optical measurements is related to variations in particle morphology, caused by changing combustion conditions. To quantify the variance of soot morphology throughout one experiment and to reduce its impact on the uncertainty of enhancements, a fresh soot optical measurement was taken after each processed soot measurement. Then, to calculate optical enhancements, optical cross sections of processed particles were normalized by the optical cross sections of the temporally closest fresh soot measurement. Both the variance of fresh soot optics throughout an experiment and the variance between experiments were quantified. The relative standard deviations of scattering and absorption cross sections of bare soot within one experiment were normally within $5\%$. The relative standard deviations of scattering and absorption cross sections of bare soot over 16 different experiments were $26\%$ and $21\%$ respectively. Thus, due to variations in morphology, the optical response of soot shows some variation from day to day, but remains stable within one day.
 
@@ -75,16 +75,11 @@ Figure \ref{fig:opt_data} shows experimentally measured enhancements in light ab
     legend pos=south east,
     xmin=0,
     ymin=1,
-    legend cell align={left}
     ]
         \addplot [color=tab_orange,mark=square*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=E_abs,y error=E_abs_err] {plots/enhancements_experiment/nigrosin.txt};
-        \addlegendentry{Nigrosin}
         \addplot [color=tab_grey,mark=triangle*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=E_abs,y error=E_abs_err] {plots/enhancements_experiment/cb_cmp_coated.txt};
-        \addlegendentry{CB200\textsubscript{cmp}}
         \addplot [color=tab_red,mark=diamond*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=E_abs,y error=E_abs_err] {plots/enhancements_experiment/cb_agg_coated.txt};
-        \addlegendentry{CB200\textsubscript{agg}}
         \addplot [color=tab_blue,mark=otimes*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=E_abs,y error=E_abs_err] {plots/enhancements_experiment/soot_coated.txt};
-        \addlegendentry{Soot}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
     \end{axis}
     \end{tikzpicture}
@@ -105,12 +100,18 @@ Figure \ref{fig:opt_data} shows experimentally measured enhancements in light ab
     xlabel={$\Delta r_\mathrm{ve},\ \mathrm{nm}$},
     ylabel=$E_\mathrm{sca}$,
     xmin=0,
-    ymin=1
+    ymin=1,
+    legend cell align={left},
+    legend pos=north west
     ]
         \addplot [color=tab_orange,mark=square*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=E_sca,y error=E_sca_err] {plots/enhancements_experiment/nigrosin.txt};
+        \addlegendentry{Nigrosin, $\rm 150\ nm$}
         \addplot [color=tab_grey,mark=triangle*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=E_sca,y error=E_sca_err] {plots/enhancements_experiment/cb_cmp_coated.txt};
+        \addlegendentry{CB200\textsubscript{cmp}, $\rm 150\ nm$}
         \addplot [color=tab_red,mark=diamond*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=E_sca,y error=E_sca_err] {plots/enhancements_experiment/cb_agg_coated.txt};
+        \addlegendentry{CB200\textsubscript{agg}, $\rm 240\ nm$}
         \addplot [color=tab_blue,mark=otimes*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=E_sca,y error=E_sca_err] {plots/enhancements_experiment/soot_coated.txt};
+        \addlegendentry{Soot, $\rm 240\ nm$}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(c)}};
     \end{axis}
     \end{tikzpicture}
@@ -200,7 +201,7 @@ Many factors can contribute to differences in experimental optical measurements 
         \addplot [ultra thick,dotted,no markers,color=tab_blue] table [col sep=tab,y=E_abs_rdg] {plots/enhancements_mie/soot.txt};
         \addlegendentry{RDG/Mie}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Soot}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Soot, 240 nm}};
     \end{axis}
     \end{tikzpicture}
     \begin{tikzpicture}
@@ -216,7 +217,7 @@ Many factors can contribute to differences in experimental optical measurements 
         \addplot [no markers,color=tab_orange] table [col sep=tab,y=E_abs_mie] {plots/enhancements_mie/nigrosin.txt};
         \addplot [ultra thick,dashed,no markers,color=tab_orange] table [col sep=tab,y=E_abs_corr] {plots/enhancements_mie/nigrosin.txt};
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(b)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Nigrosin}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Nigrosin, 150 nm}};
     \end{axis}
     \end{tikzpicture}}
     \resizebox{\columnwidth}{!}{\begin{tikzpicture}
@@ -233,7 +234,7 @@ Many factors can contribute to differences in experimental optical measurements 
         \addplot [ultra thick,dashed,no markers,color=tab_grey] table [col sep=tab,y=E_abs_corr] {plots/enhancements_mie/cb_cmp.txt};
         \addplot [ultra thick,dotted,no markers,color=tab_grey] table [col sep=tab,y=E_abs_rdg] {plots/enhancements_mie/cb_cmp.txt};
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(c)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{cmp}}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{cmp}, 150 nm}};
     \end{axis}
     \end{tikzpicture}
     \begin{tikzpicture}
@@ -250,7 +251,7 @@ Many factors can contribute to differences in experimental optical measurements 
         \addplot [ultra thick,dashed,no markers,color=tab_red] table [col sep=tab,y=E_abs_corr] {plots/enhancements_mie/cb_agg.txt};
         \addplot [ultra thick,dotted,no markers,color=tab_red] table [col sep=tab,y=E_abs_rdg] {plots/enhancements_mie/cb_agg.txt};
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(d)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{agg}}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{agg}, 240 nm}};
     \end{axis}
     \end{tikzpicture}}
     \caption{Measured and calculated absorption enhancements for compact soot (a), nigrosin (b), compact CB (c), and agglomerated CB (d). Measured data are presented by markers, calculated with Mie theory by solid line, and calculated with Mie by accounting for doubly charged particles by dashed line. For cases (a) and (d), the dashed and solid line overlap due to a negligible fraction of double charged particles. Volume equivalent and mobility diameters for all aerosol types are available in Table \ref{tab:densities}.}
@@ -275,7 +276,7 @@ Many factors can contribute to differences in experimental optical measurements 
         \addplot [ultra thick,dashed,no markers,color=tab_blue] table [col sep=tab,y=E_sca_corr] {plots/enhancements_mie/soot.txt};
         \addlegendentry{Mie (+,++)}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Soot}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Soot, 240 nm}};
     \end{axis}
     \end{tikzpicture}
     \begin{tikzpicture}
@@ -291,7 +292,7 @@ Many factors can contribute to differences in experimental optical measurements 
         \addplot [no markers,color=tab_orange] table [col sep=tab,y=E_sca_mie] {plots/enhancements_mie/nigrosin.txt};
         \addplot [ultra thick,dashed,no markers,color=tab_orange] table [col sep=tab,y=E_sca_corr] {plots/enhancements_mie/nigrosin.txt};
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(b)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Nigrosin}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Nigrosin, 150 nm}};
     \end{axis}
     \end{tikzpicture}}
     \resizebox{\columnwidth}{!}{\begin{tikzpicture}
@@ -307,7 +308,7 @@ Many factors can contribute to differences in experimental optical measurements 
         \addplot [no markers,color=tab_grey] table [col sep=tab,y=E_sca_mie] {plots/enhancements_mie/cb_cmp.txt};
         \addplot [ultra thick,dashed,no markers,color=tab_grey] table [col sep=tab,y=E_sca_corr] {plots/enhancements_mie/cb_cmp.txt};
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(c)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{cmp}}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{cmp}, 150 nm}};
     \end{axis}
     \end{tikzpicture}
     \begin{tikzpicture}
@@ -323,7 +324,7 @@ Many factors can contribute to differences in experimental optical measurements 
         \addplot [no markers,color=tab_red] table [col sep=tab,y=E_sca_mie] {plots/enhancements_mie/cb_agg.txt};
         \addplot [ultra thick,dashed,no markers,color=tab_red] table [col sep=tab,y=E_sca_corr] {plots/enhancements_mie/cb_agg.txt};
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(d)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{agg}}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{agg}, 240 nm}};
     \end{axis}
     \end{tikzpicture}}
     \caption{Measured and calculated scattering  enhancements for compact soot (a), nigrosin (b), compact CB (c), and agglomerated CB (d). Measured data are shown by markers, calculated with Mie theory by solid line, and calculated with Mie by accounting for doubly charged particles by dashed line. For cases (a) and (d), the dashed and solid line overlap due to a negligible fraction of double charged particles. Volume equivalent and mobility diameters for all aerosol types are available in Table \ref{tab:densities}}
@@ -347,7 +348,7 @@ Many factors can contribute to differences in experimental optical measurements 
         \addplot [ultra thick,dashed,no markers,color=tab_blue] table [col sep=tab,y=SSA_corr] {plots/absolute_mie/soot.txt};
         \addlegendentry{Mie (+,++)}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Soot}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Soot, 240 nm}};
     \end{axis}
     \end{tikzpicture}
     \begin{tikzpicture}
@@ -362,7 +363,7 @@ Many factors can contribute to differences in experimental optical measurements 
         \addplot [no markers,color=tab_orange] table [col sep=tab,y=SSA_mie] {plots/absolute_mie/nigrosin.txt};
         \addplot [ultra thick,dashed,no markers,color=tab_orange] table [col sep=tab,y=SSA_corr] {plots/absolute_mie/nigrosin.txt};
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(b)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Nigrosin}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Nigrosin, 150 nm}};
     \end{axis}
     \end{tikzpicture}}
     \resizebox{\columnwidth}{!}{\begin{tikzpicture}
@@ -377,7 +378,7 @@ Many factors can contribute to differences in experimental optical measurements 
         \addplot [no markers,color=tab_grey] table [col sep=tab,y=SSA_mie] {plots/absolute_mie/cb_cmp.txt};
         \addplot [ultra thick,dashed,no markers,color=tab_grey] table [col sep=tab,y=SSA_corr] {plots/absolute_mie/cb_cmp.txt};
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(c)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{cmp}}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{cmp}, 150 nm}};
     \end{axis}
     \end{tikzpicture}
     \begin{tikzpicture}
@@ -392,7 +393,7 @@ Many factors can contribute to differences in experimental optical measurements 
         \addplot [no markers,color=tab_red] table [col sep=tab,y=SSA_mie] {plots/absolute_mie/cb_agg.txt};
         \addplot [ultra thick,dashed,no markers,color=tab_red] table [col sep=tab,y=SSA_corr] {plots/absolute_mie/cb_agg.txt};
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(d)}};
-        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{agg}}};
+        \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{agg}, 240 nm}};
     \end{axis}
     \end{tikzpicture}}
     \caption{Measured and calculated SSA for compact soot (a), nigrosin (b), compact CB (c), and agglomerated CB (d). Measured data are shown by markers, calculated with core-shell Mie theory  by solid line, and calculated with Mie by accounting for doubly charged particles by dashed line. For cases (a) and (d), the dashed and solid line overlap due to a negligible fraction of double charged particles. Volume equivalent and mobility diameters for all aerosol types are available in Table \ref{tab:densities}}
