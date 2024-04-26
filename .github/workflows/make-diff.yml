@@ -15,18 +15,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Generate a diff file (main text)
-        uses: egor-demidov/create-latexdiff@v1.1
-      - name: Archive compiled artifact
+        uses: egor-demidov/create-latexdiff@v1.2
+      - name: Archive compiled artifact (main text)
         uses: actions/upload-artifact@v3
         with:
           name: diff-file-main
           path: |
             diff.pdf
       - name: Generate a diff file (SI)
-        uses: egor-demidov/create-latexdiff@v1.1
+        uses: egor-demidov/create-latexdiff@v1.2
         with:
           main-file: 'supplemental.tex'
-      - uses: actions/upload-artifact@v3
+      - name: Archive compiled artifact (SI)
+        uses: actions/upload-artifact@v3
         with:
           name: diff-file-si
           path: |
