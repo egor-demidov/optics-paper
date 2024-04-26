@@ -24,7 +24,7 @@ Multiply charged particles are larger and acquire coatings at a lower rate than 
     xmax=2,
     legend cell align={left}
     ]
-        \addplot [only marks,tab_blue,mark=otimes*,mark options={scale=0.5}] table {plots/recharged_coated/nigrosin_fresh.txt} node [above,pos=0.33] {$1\rightarrow 2$} node [above,pos=0.5] {$1\rightarrow 1$} node [above,pos=0.7] {$2\rightarrow 1$};
+        \addplot [only marks,tab_blue,mark=otimes*,mark options={scale=0.5}] table {plots/recharged_coated/nigrosin_fresh.txt} node [above,pos=0.33] {$1\rightarrow 2$} node [above,pos=0.5] {$q\rightarrow q$} node [above,pos=0.7] {$2\rightarrow 1$};
         \addplot [only marks,tab_orange,mark=square*,mark options={scale=0.5}] table {plots/recharged_coated/nigrosin_coated.txt};
         % f(x) mult/stdev/sqrt(2*pi)*exp(-1/2*((x-shift)./stdev).^2)
         \addplot [domain=0.5:2,no markers,color=tab_blue,samples=100] {0.3972/0.0425/sqrt(2*pi)*exp(-1/2*((x-0.6746)/0.0425)^2)+2.4380/0.0634/sqrt(2*pi)*exp(-1/2*((x-1.0230)/0.0634)^2)+0.7397/0.1165/sqrt(2*pi)*exp(-1/2*((x-1.5875)/0.1165)^2)};
@@ -33,7 +33,7 @@ Multiply charged particles are larger and acquire coatings at a lower rate than 
         \addlegendentry{Coated};
     \end{axis}
     \end{tikzpicture}
-    \caption{Recharged TDMA scans of fresh and coated 150 nm nigrosin. X-axis, the electrical mobility diameter, is normalized by $D_0=150\ \rm nm$. $1\rightarrow 1$ indicates particles that were singly charged prior to recharging and remained singly charged after, $2\rightarrow 1$ indicates particles that were doubly charged prior to recharging and became singly charged after, $1\rightarrow 2$ indicates particles that were singly charged prior to recharging and became doubly charged after. While there are also triply charged particles in the size-classified aerosol, they are not visible in this TDMA scan due to limitations on the scan range with the sample flow rate used during optical measurements. Broader scans of bare particles that do show triply charged particles are available in Figure \ref{s:fig:recharged_all}.}
+    \caption{Recharged TDMA scans of fresh and coated 150 nm nigrosin. X-axis, the electrical mobility diameter, is normalized by $D_0=150\ \rm nm$. $q\rightarrow q$ indicates particles that were singly charged prior to recharging and remained singly charged after, but this mode still contains a significant number of doubly charged particles \citep{RN7}, $2\rightarrow 1$ indicates particles that were doubly charged prior to recharging and became singly charged after, $1\rightarrow 2$ indicates particles that were singly charged prior to recharging and became doubly charged after. While there are also triply charged particles in the size-classified aerosol, they are not visible in this TDMA scan due to limitations on the scan range with the sample flow rate used during optical measurements. Broader scans of bare particles that do show triply charged particles are available in Figure \ref{s:fig:recharged_all}.}
     \label{fig:recharged_coated}
 \end{figure}
 
