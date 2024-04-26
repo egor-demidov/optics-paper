@@ -311,7 +311,7 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ymin=1.0e-2,
     ymax=4.5e-2
     ]
-        \addplot [only marks,color=tab_blue,mark=otimes*] table [col sep=tab,y=C_abs] {plots/absolute_experimental/soot_coated.txt};
+        \addplot [only marks,color=tab_blue,mark=otimes*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_abs,y error=C_abs_err] {plots/absolute_experimental/soot_coated.txt};
         \addlegendentry{Experimental}
         \addplot [no markers,color=tab_blue] table [col sep=tab,y=C_abs_mie] {plots/absolute_mie/soot.txt};
         \addlegendentry{Mie(+)}
@@ -530,7 +530,7 @@ In this section, we derive an equation that relates the coating thicknesses of s
 
 Figure \ref{s:fig:thickness} shows the change in volume equivalent coating thickness of 150 nm compact CB, which was measured experimentally, and coating thickness of doubly charged particles with initial mobility diameter of 236 nm calculated with equation \ref{s:eq:thickness}. Coating thickness of larger particles is consistently lower than that of smaller particles.
 
-To account for the slower growth of doubly charged particles in optical calculations, for each particle type, two datasets of optical cross sections were calculated with Mie: one for smaller singly charged particles with coating thicknesses obtained experimentally and one for larger doubly charged particles with coating thicknesses calculated with Equation \ref{s:eq:thickness}. A number-weighted average ($C_{avg}$) between these datasets was calculated at each point,
+To account for the slower diameter growth of doubly charged particles in optical calculations, for each particle type, two datasets of optical cross sections were calculated with Mie: one for smaller singly charged particles with coating thicknesses obtained experimentally and one for larger doubly charged particles with coating thicknesses calculated with Equation \ref{s:eq:thickness}. A number-weighted average ($C_{avg}$) between these datasets was calculated at each point,
 
 \begin{equation}
     C_{avg}=f_1C_1+f_2C_2
