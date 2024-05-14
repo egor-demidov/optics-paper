@@ -172,8 +172,8 @@ To quantify the number fraction of doubly charged particles, each mode on the re
 				xlabel=$D/D_0$,
 				ylabel=$N$	
 			]
-                    \addplot+[smooth,no markers] table [x=X_150,y=Y_150,col sep=comma]{plots/tdma_recharged/recharged_soot.csv};
-				\addplot+[smooth,no markers,dashed,style={ultra thick}] table [x=X_240,y=Y_240,col sep=comma] {plots/tdma_recharged/recharged_soot.csv};
+                    \addplot+[smooth,no markers] table [x=X_150,y=Y_150,col sep=comma]{tdma_recharged_recharged_soot.csv};
+				\addplot+[smooth,no markers,dashed,style={ultra thick}] table [x=X_240,y=Y_240,col sep=comma] {tdma_recharged_recharged_soot.csv};
 				\addlegendentry{150 nm}
 				\addlegendentry{240 nm}
 				\node[anchor=north west] at (rel axis cs:0,1) {\textbf{(a)}};
@@ -185,7 +185,7 @@ To quantify the number fraction of doubly charged particles, each mode on the re
 				xlabel=$D/D_0$,
 				ylabel=$N$	
 			]
-				\addplot+[smooth,no markers] table [x=X_150,y=Y_150,col sep=comma] {plots/tdma_recharged/recharged_nigrosin.csv};
+				\addplot+[smooth,no markers] table [x=X_150,y=Y_150,col sep=comma] {tdma_recharged_recharged_nigrosin.csv};
 				\node[anchor=north west] at (rel axis cs:0,1) {\textbf{(b)}};
 			\end{axis}
 		\end{tikzpicture}
@@ -197,8 +197,8 @@ To quantify the number fraction of doubly charged particles, each mode on the re
 				xlabel=$D/D_0$,
 				ylabel=$N$	
 			]
-				\addplot+[smooth,no markers] table [x=X_150,y=Y_150,col sep=comma] {plots/tdma_recharged/recharged_cb_cmp.csv};
-				\addplot+[smooth,no markers,dashed,style={ultra thick}] table [x=X_240,y=Y_240,col sep=comma] {plots/tdma_recharged/recharged_cb_cmp.csv};
+				\addplot+[smooth,no markers] table [x=X_150,y=Y_150,col sep=comma] {tdma_recharged_recharged_cb_cmp.csv};
+				\addplot+[smooth,no markers,dashed,style={ultra thick}] table [x=X_240,y=Y_240,col sep=comma] {tdma_recharged_recharged_cb_cmp.csv};
 				\addlegendentry{150 nm}
 				\addlegendentry{240 nm}
 				\node[anchor=north west] at (rel axis cs:0,1) {\textbf{(c)}};
@@ -210,8 +210,8 @@ To quantify the number fraction of doubly charged particles, each mode on the re
 				xlabel=$D/D_0$,
 				ylabel=$N$	
 			]
-				\addplot+[smooth,no markers] table [x=X_150,y=Y_150,col sep=comma] {plots/tdma_recharged/recharged_cb_agg.csv};
-				\addplot+[smooth,no markers,dashed,style={ultra thick}] table [x=X_240,y=Y_240,col sep=comma] {plots/tdma_recharged/recharged_cb_agg.csv};
+				\addplot+[smooth,no markers] table [x=X_150,y=Y_150,col sep=comma] {tdma_recharged_recharged_cb_agg.csv};
+				\addplot+[smooth,no markers,dashed,style={ultra thick}] table [x=X_240,y=Y_240,col sep=comma] {tdma_recharged_recharged_cb_agg.csv};
 				\addlegendentry{150 nm}
 				\addlegendentry{240 nm}
 				\node[anchor=north west] at (rel axis cs:0,1) {\textbf{(d)}};
@@ -313,13 +313,13 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ymin=1.0e-2,
     ymax=4.5e-2
     ]
-        \addplot [only marks,color=tab_blue,mark=otimes*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_abs,y error=C_abs_err_res] {plots/absolute_experimental/soot_coated.txt};
+        \addplot [only marks,color=tab_blue,mark=otimes*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_abs,y error=C_abs_err_res] {absolute_experimental_soot_coated.txt};
         \addlegendentry{Experimental}
-        \addplot [no markers,color=tab_blue] table [col sep=tab,y=C_abs_mie] {plots/absolute_mie/soot.txt};
+        \addplot [no markers,color=tab_blue] table [col sep=tab,y=C_abs_mie] {absolute_mie_soot.txt};
         \addlegendentry{Mie(+)}
-        \addplot [ultra thick,dashed,no markers,color=tab_blue] table [col sep=tab,y=C_abs_corr] {plots/absolute_mie/soot.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_blue] table [col sep=tab,y=C_abs_corr] {absolute_mie_soot.txt};
         \addlegendentry{Mie(++)}
-        \addplot [ultra thick,dotted,no markers,color=tab_blue] table [col sep=tab,y=C_abs_rdg] {plots/absolute_mie/soot.txt};
+        \addplot [ultra thick,dotted,no markers,color=tab_blue] table [col sep=tab,y=C_abs_rdg] {absolute_mie_soot.txt};
         \addlegendentry{RDG/Mie}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
         \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Soot, D\textsubscript{ve} 137 nm}};
@@ -334,11 +334,11 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ymin=0.5e-2,
     ymax=4.5e-2
     ]
-        \addplot [only marks,color=tab_orange,mark=square*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_abs,y error=C_abs_err_res] {plots/absolute_experimental/nigrosin.txt};
+        \addplot [only marks,color=tab_orange,mark=square*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_abs,y error=C_abs_err_res] {absolute_experimental_nigrosin.txt};
         \addlegendentry{Experimental}
-        \addplot [no markers,color=tab_orange] table [col sep=tab,y=C_abs_mie] {plots/absolute_mie/nigrosin.txt};
+        \addplot [no markers,color=tab_orange] table [col sep=tab,y=C_abs_mie] {absolute_mie_nigrosin.txt};
         \addlegendentry{Mie(+)}
-        \addplot [ultra thick,dashed,no markers,color=tab_orange] table [col sep=tab,y=C_abs_corr] {plots/absolute_mie/nigrosin.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_orange] table [col sep=tab,y=C_abs_corr] {absolute_mie_nigrosin.txt};
         \addlegendentry{Mie(++)}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(b)}};
         \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Nigrosin, D\textsubscript{ve} 150 nm}};
@@ -353,13 +353,13 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ymin=0.2e-2,
     ymax=7.5e-2
     ]
-        \addplot [only marks,color=tab_grey,mark=triangle*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_abs,y error=C_abs_err_res] {plots/absolute_experimental/cb_cmp_coated.txt};
+        \addplot [only marks,color=tab_grey,mark=triangle*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_abs,y error=C_abs_err_res] {absolute_experimental_cb_cmp_coated.txt};
         \addlegendentry{Experimental}
-        \addplot [no markers,color=tab_grey] table [col sep=tab,y=C_abs_mie] {plots/absolute_mie/cb_cmp.txt};
+        \addplot [no markers,color=tab_grey] table [col sep=tab,y=C_abs_mie] {absolute_mie_cb_cmp.txt};
         \addlegendentry{Mie(+)}
-        \addplot [ultra thick,dashed,no markers,color=tab_grey] table [col sep=tab,y=C_abs_corr] {plots/absolute_mie/cb_cmp.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_grey] table [col sep=tab,y=C_abs_corr] {absolute_mie_cb_cmp.txt};
         \addlegendentry{Mie(++)}
-        \addplot [ultra thick,dotted,no markers,color=tab_grey] table [col sep=tab,y=C_abs_rdg] {plots/absolute_mie/cb_cmp.txt};
+        \addplot [ultra thick,dotted,no markers,color=tab_grey] table [col sep=tab,y=C_abs_rdg] {absolute_mie_cb_cmp.txt};
         \addlegendentry{RDG/Mie}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(c)}};
         \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{cmp}, D\textsubscript{ve} 111 nm}};
@@ -374,13 +374,13 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ymin=2.5e-2,
     ymax=6.5e-2
     ]
-        \addplot [only marks,color=tab_red,mark=diamond*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_abs,y error=C_abs_err_res] {plots/absolute_experimental/cb_agg_coated.txt};
+        \addplot [only marks,color=tab_red,mark=diamond*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_abs,y error=C_abs_err_res] {absolute_experimental_cb_agg_coated.txt};
         \addlegendentry{Experimental}
-        \addplot [no markers,color=tab_red] table [col sep=tab,y=C_abs_mie] {plots/absolute_mie/cb_agg.txt};
+        \addplot [no markers,color=tab_red] table [col sep=tab,y=C_abs_mie] {absolute_mie_cb_agg.txt};
         \addlegendentry{Mie(+)}
-        \addplot [ultra thick,dashed,no markers,color=tab_red] table [col sep=tab,y=C_abs_corr] {plots/absolute_mie/cb_agg.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_red] table [col sep=tab,y=C_abs_corr] {absolute_mie_cb_agg.txt};
         \addlegendentry{Mie(++)}
-        \addplot [ultra thick,dotted,no markers,color=tab_red] table [col sep=tab,y=C_abs_rdg] {plots/absolute_mie/cb_agg.txt};
+        \addplot [ultra thick,dotted,no markers,color=tab_red] table [col sep=tab,y=C_abs_rdg] {absolute_mie_cb_agg.txt};
         \addlegendentry{RDG/Mie}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(d)}};
         \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{agg}, D\textsubscript{ve} 170 nm}};
@@ -403,11 +403,11 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ymin=0,
     ymax=6.5e-2
     ]
-        \addplot [only marks,color=tab_blue,mark=otimes*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_sca,y error=C_sca_err_res] {plots/absolute_experimental/soot_coated.txt};
+        \addplot [only marks,color=tab_blue,mark=otimes*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_sca,y error=C_sca_err_res] {absolute_experimental_soot_coated.txt};
         \addlegendentry{Experimental}
-        \addplot [no markers,color=tab_blue] table [col sep=tab,y=C_sca_mie] {plots/absolute_mie/soot.txt};
+        \addplot [no markers,color=tab_blue] table [col sep=tab,y=C_sca_mie] {absolute_mie_soot.txt};
         \addlegendentry{Mie(+)}
-        \addplot [ultra thick,dashed,no markers,color=tab_blue] table [col sep=tab,y=C_sca_corr] {plots/absolute_mie/soot.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_blue] table [col sep=tab,y=C_sca_corr] {absolute_mie_soot.txt};
         \addlegendentry{Mie(++)}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
         \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Soot, D\textsubscript{ve} 137 nm}};
@@ -422,11 +422,11 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ymin=0,
     ymax=6.5e-2
     ]
-        \addplot [only marks,color=tab_orange,mark=square*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_sca,y error=C_sca_err_res] {plots/absolute_experimental/nigrosin.txt};
+        \addplot [only marks,color=tab_orange,mark=square*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_sca,y error=C_sca_err_res] {absolute_experimental_nigrosin.txt};
         \addlegendentry{Experimental}
-        \addplot [no markers,color=tab_orange] table [col sep=tab,y=C_sca_mie] {plots/absolute_mie/nigrosin.txt};
+        \addplot [no markers,color=tab_orange] table [col sep=tab,y=C_sca_mie] {absolute_mie_nigrosin.txt};
         \addlegendentry{Mie(+)}
-        \addplot [ultra thick,dashed,no markers,color=tab_orange] table [col sep=tab,y=C_sca_corr] {plots/absolute_mie/nigrosin.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_orange] table [col sep=tab,y=C_sca_corr] {absolute_mie_nigrosin.txt};
         \addlegendentry{Mie(++)}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(b)}};
         \node[anchor=south east] at (rel axis cs:1,0) {\textbf{Nigrosin, D\textsubscript{ve} 150 nm}};
@@ -441,11 +441,11 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ymin=-0.2e-2,
     ymax=3.5e-2
     ]
-        \addplot [only marks,color=tab_grey,mark=triangle*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_sca,y error=C_sca_err_res] {plots/absolute_experimental/cb_cmp_coated.txt};
+        \addplot [only marks,color=tab_grey,mark=triangle*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_sca,y error=C_sca_err_res] {absolute_experimental_cb_cmp_coated.txt};
         \addlegendentry{Experimental}
-        \addplot [no markers,color=tab_grey] table [col sep=tab,y=C_sca_mie] {plots/absolute_mie/cb_cmp.txt};
+        \addplot [no markers,color=tab_grey] table [col sep=tab,y=C_sca_mie] {absolute_mie_cb_cmp.txt};
         \addlegendentry{Mie(+)}
-        \addplot [ultra thick,dashed,no markers,color=tab_grey] table [col sep=tab,y=C_sca_corr] {plots/absolute_mie/cb_cmp.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_grey] table [col sep=tab,y=C_sca_corr] {absolute_mie_cb_cmp.txt};
         \addlegendentry{Mie(++)}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(c)}};
         \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{cmp}, D\textsubscript{ve} 111 nm}};
@@ -460,11 +460,11 @@ Absorption and scattering cross sections that were used to calculate enhancement
     ymin=0,
     ymax=6.5e-2
     ]
-        \addplot [only marks,color=tab_red,mark=diamond*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_sca,y error=C_sca_err_res] {plots/absolute_experimental/cb_agg_coated.txt};
+        \addplot [only marks,color=tab_red,mark=diamond*,error bars/.cd, y dir=both, y explicit] table [col sep=tab,y=C_sca,y error=C_sca_err_res] {absolute_experimental_cb_agg_coated.txt};
         \addlegendentry{Experimental}
-        \addplot [no markers,color=tab_red] table [col sep=tab,y=C_sca_mie] {plots/absolute_mie/cb_agg.txt};
+        \addplot [no markers,color=tab_red] table [col sep=tab,y=C_sca_mie] {absolute_mie_cb_agg.txt};
         \addlegendentry{Mie(+)}
-        \addplot [ultra thick,dashed,no markers,color=tab_red] table [col sep=tab,y=C_sca_corr] {plots/absolute_mie/cb_agg.txt};
+        \addplot [ultra thick,dashed,no markers,color=tab_red] table [col sep=tab,y=C_sca_corr] {absolute_mie_cb_agg.txt};
         \addlegendentry{Mie(++)}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(d)}};
         \node[anchor=south east] at (rel axis cs:1,0) {\textbf{CB\textsubscript{agg}, D\textsubscript{ve} 170 nm}};

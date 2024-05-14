@@ -41,10 +41,10 @@ Compact CB particles grew less in mobility diameter than nigrosin particles for 
     %legend pos=south east,
     xmin=1
     ]
-        \addplot [color=tab_orange,mark=square*] table {plots/gfd/nigrosin_coated.txt};
-        \addplot [color=tab_grey,mark=triangle*] table {plots/gfd/cb_cmp_coated.txt};
-        \addplot [color=tab_red,mark=diamond*] table {plots/gfd/cb_agg_coated.txt};
-        \addplot [color=tab_blue,mark=otimes*] table {plots/gfd/soot_coated.txt};
+        \addplot [color=tab_orange,mark=square*] table {gfd_nigrosin_coated.txt};
+        \addplot [color=tab_grey,mark=triangle*] table {gfd_cb_cmp_coated.txt};
+        \addplot [color=tab_red,mark=diamond*] table {gfd_cb_agg_coated.txt};
+        \addplot [color=tab_blue,mark=otimes*] table {gfd_soot_coated.txt};
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(a)}};
     \end{axis}
     \end{tikzpicture}
@@ -60,11 +60,11 @@ Compact CB particles grew less in mobility diameter than nigrosin particles for 
     ]
         \addplot [color=tab_orange,mark=square*][domain=0:3.5] {1};
         \addlegendentry{Nigrosin, $\rm 150\ nm$}
-        \addplot [color=tab_grey,mark=triangle*] table {plots/gfd/cb_cmp_heated.txt};
+        \addplot [color=tab_grey,mark=triangle*] table {gfd_cb_cmp_heated.txt};
         \addlegendentry{CB\textsubscript{cmp}, $\rm 150\ nm$}
-        \addplot [color=tab_red,mark=diamond*] table {plots/gfd/cb_agg_heated.txt};
+        \addplot [color=tab_red,mark=diamond*] table {gfd_cb_agg_heated.txt};
         \addlegendentry{CB\textsubscript{agg}, $\rm 240\ nm$}
-        \addplot [color=tab_blue,mark=otimes*] table {plots/gfd/soot_heated.txt};
+        \addplot [color=tab_blue,mark=otimes*] table {gfd_soot_heated.txt};
         \addlegendentry{Soot, $\rm 240\ nm$}
         \node[anchor=north east] at (rel axis cs:1,1) {\textbf{(b)}};
     \end{axis}
