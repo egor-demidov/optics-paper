@@ -456,13 +456,13 @@ To separate the contributions from restructuring and coating addition to light s
     ymin=1,
     ymax=25
     ]
-        \addplot [color=tab_purple,mark=star,error bars/.cd, y dir=both, y explicit] table [y=E_sca,y error=E_sca_err]{plots/enhancements_experiment_soot_coated.txt};
+        \addplot [color=tab_purple,mark=star,error bars/.cd, y dir=both, y explicit] table [y=E_sca,y error=E_sca_err]{enhancements_experiment_soot_coated.txt};
         \addlegendentry{Experimental}
         \addplot [dashed,thick,color=tab_blue,mark=otimes*,mark options={solid,thick}] table [y=E_sca] {enhancements_dda_df_1_8.txt};
         \addlegendentry{$D_f=1.8$}
         \addplot [dashed,thick,color=tab_orange,mark=square*,mark options={solid,thick}] table [y=E_sca] {enhancements_dda_df_2_1.txt};
         \addlegendentry{$D_f=2.1$}
-        \addplot [dashed,thick,color=tab_grey,mark=triangle*,mark options={solid,thick}] table [y=E_sca] {enhancements_dda_f_2_4.txt};
+        \addplot [dashed,thick,color=tab_grey,mark=triangle*,mark options={solid,thick}] table [y=E_sca] {enhancements_dda_df_2_4.txt};
         \addlegendentry{$D_f=2.4$}
         \addplot [dashed,thick,color=tab_red,mark=diamond*,mark options={solid,thick}] table [y=E_sca] {enhancements_dda_df_2_7.txt};
         \addlegendentry{$D_f=2.7$}
